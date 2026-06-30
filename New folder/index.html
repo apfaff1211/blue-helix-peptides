@@ -1,0 +1,1344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Blue Helix Peptides — Research-Grade Performance</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet"/>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+
+:root{
+  --navy:#0A1628;
+  --blue:#1A5FD4;
+  --blue-mid:#2D7BF0;
+  --blue-pale:#EBF2FD;
+  --blue-glow:rgba(26,95,212,0.12);
+  --ice:#F5F8FE;
+  --white:#FFFFFF;
+  --text-primary:#0A1628;
+  --text-secondary:#4A5568;
+  --text-muted:#8896AB;
+  --border:#DDE5F0;
+  --border-light:#EEF3FA;
+  --radius:10px;
+  --radius-lg:16px;
+}
+
+html{scroll-behavior:smooth}
+body{font-family:'Inter',sans-serif;color:var(--text-primary);background:var(--white);line-height:1.6;-webkit-font-smoothing:antialiased}
+
+/* NAV */
+nav{position:sticky;top:0;z-index:100;background:rgba(255,255,255,0.92);backdrop-filter:blur(12px);border-bottom:1px solid var(--border-light);padding:0 5%}
+.nav-inner{max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;height:64px}
+.logo{display:flex;align-items:center;gap:10px;text-decoration:none}
+.logo-icon{width:34px;height:34px}
+.logo-text{font-family:'DM Serif Display',serif;font-size:18px;color:var(--navy);letter-spacing:-0.01em}
+.logo-text span{color:var(--blue)}
+.nav-links{display:flex;align-items:center;gap:32px;list-style:none}
+.nav-links a{text-decoration:none;font-size:14px;font-weight:500;color:var(--text-secondary);transition:color .2s}
+.nav-links a:hover{color:var(--blue)}
+.nav-cta{background:var(--blue);color:#fff;padding:9px 20px;border-radius:var(--radius);font-size:14px;font-weight:500;text-decoration:none;transition:background .2s,transform .15s}
+.nav-cta:hover{background:#1550b8;transform:translateY(-1px)}
+.nav-cart{display:flex;align-items:center;gap:6px;font-size:14px;font-weight:500;color:var(--text-secondary);text-decoration:none;cursor:pointer;position:relative}
+.cart-badge{background:var(--blue);color:#fff;border-radius:50%;width:18px;height:18px;font-size:10px;display:flex;align-items:center;justify-content:center;position:absolute;top:-5px;right:-8px}
+
+/* HERO */
+.hero{background:var(--navy);color:#fff;padding:90px 5% 80px;position:relative;overflow:hidden}
+.hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 80% 60% at 70% 50%,rgba(26,95,212,0.25) 0%,transparent 70%);pointer-events:none}
+.hero-inner{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center;position:relative}
+.hero-eyebrow{font-size:11px;font-weight:600;letter-spacing:0.14em;text-transform:uppercase;color:var(--blue-mid);margin-bottom:18px}
+.hero-headline{font-family:'DM Serif Display',serif;font-size:clamp(40px,4.5vw,58px);line-height:1.08;letter-spacing:-0.02em;margin-bottom:22px}
+.hero-headline em{font-style:italic;color:var(--blue-mid)}
+.hero-sub{font-size:16px;color:rgba(255,255,255,0.65);line-height:1.7;margin-bottom:36px;max-width:460px}
+.hero-actions{display:flex;gap:14px;flex-wrap:wrap}
+.btn-primary{background:var(--blue);color:#fff;padding:14px 28px;border-radius:var(--radius);font-size:15px;font-weight:500;text-decoration:none;border:none;cursor:pointer;transition:background .2s,transform .15s}
+.btn-primary:hover{background:#1550b8;transform:translateY(-1px)}
+.btn-outline{border:1px solid rgba(255,255,255,0.25);color:#fff;padding:14px 28px;border-radius:var(--radius);font-size:15px;font-weight:500;text-decoration:none;cursor:pointer;background:transparent;transition:border-color .2s,background .2s}
+.btn-outline:hover{border-color:rgba(255,255,255,0.5);background:rgba(255,255,255,0.06)}
+.hero-trust{display:flex;gap:24px;margin-top:44px;padding-top:32px;border-top:1px solid rgba(255,255,255,0.1)}
+.trust-item{text-align:left}
+.trust-num{font-family:'DM Serif Display',serif;font-size:28px;color:#fff;line-height:1}
+.trust-label{font-size:12px;color:rgba(255,255,255,0.5);margin-top:3px}
+
+/* HELIX SVG visual */
+.hero-visual{display:flex;justify-content:center;align-items:center}
+.helix-wrap{position:relative;width:320px;height:320px}
+.helix-glow{position:absolute;inset:-30px;background:radial-gradient(circle,rgba(26,95,212,0.3) 0%,transparent 70%);border-radius:50%;animation:pulse-glow 3s ease-in-out infinite}
+@keyframes pulse-glow{0%,100%{opacity:.6;transform:scale(1)}50%{opacity:1;transform:scale(1.06)}}
+.helix-svg{width:100%;height:100%;position:relative}
+
+/* TRUST BAR */
+.trust-bar{background:var(--ice);border-bottom:1px solid var(--border-light);padding:18px 5%}
+.trust-bar-inner{max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap}
+.trust-bar-item{display:flex;align-items:center;gap:8px;font-size:13px;font-weight:500;color:var(--text-secondary)}
+.trust-icon{width:18px;height:18px;color:var(--blue)}
+
+/* SECTIONS */
+section{padding:80px 5%}
+.section-inner{max-width:1200px;margin:0 auto}
+.section-eyebrow{font-size:11px;font-weight:600;letter-spacing:0.14em;text-transform:uppercase;color:var(--blue);margin-bottom:12px}
+.section-title{font-family:'DM Serif Display',serif;font-size:clamp(28px,3vw,40px);line-height:1.15;letter-spacing:-0.02em;margin-bottom:16px;color:var(--navy)}
+.section-sub{font-size:16px;color:var(--text-secondary);max-width:560px;line-height:1.7}
+
+/* PRODUCTS */
+#products{background:var(--white)}
+.products-header{display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:40px;flex-wrap:wrap;gap:16px}
+.product-filters{display:flex;gap:8px;flex-wrap:wrap}
+.filter-btn{padding:7px 16px;border-radius:99px;font-size:13px;font-weight:500;border:1px solid var(--border);background:#fff;color:var(--text-secondary);cursor:pointer;transition:all .2s}
+.filter-btn.active,.filter-btn:hover{background:var(--blue);color:#fff;border-color:var(--blue)}
+.products-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:24px}
+.product-card{border:1px solid var(--border-light);border-radius:var(--radius-lg);overflow:hidden;background:#fff;transition:box-shadow .2s,transform .2s;cursor:pointer}
+.product-card:hover{box-shadow:0 8px 32px rgba(26,95,212,0.1);transform:translateY(-3px)}
+.product-img{height:200px;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden}
+.product-badge{position:absolute;top:12px;left:12px;background:var(--blue);color:#fff;font-size:10px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;padding:4px 10px;border-radius:99px}
+.product-badge.new{background:#0F6E56}
+.product-body{padding:18px}
+.product-name{font-size:15px;font-weight:600;color:var(--navy);margin-bottom:4px}
+.product-desc{font-size:13px;color:var(--text-muted);line-height:1.5;margin-bottom:14px}
+.product-footer{display:flex;align-items:center;justify-content:space-between}
+.product-price{font-size:17px;font-weight:600;color:var(--navy)}
+.product-price span{font-size:12px;font-weight:400;color:var(--text-muted);margin-left:2px}
+.add-btn{background:var(--blue-pale);color:var(--blue);border:none;padding:8px 16px;border-radius:var(--radius);font-size:13px;font-weight:500;cursor:pointer;transition:background .2s,color .2s}
+.add-btn:hover{background:var(--blue);color:#fff}
+
+/* SCIENCE */
+#science{background:var(--navy);color:#fff}
+.science-grid{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center;margin-top:48px}
+.science-points{display:flex;flex-direction:column;gap:28px}
+.sci-point{display:flex;gap:16px}
+.sci-num{font-family:'DM Serif Display',serif;font-size:36px;color:var(--blue-mid);line-height:1;flex-shrink:0;width:48px}
+.sci-text h4{font-size:15px;font-weight:600;color:#fff;margin-bottom:4px}
+.sci-text p{font-size:14px;color:rgba(255,255,255,0.55);line-height:1.6}
+.cert-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.cert-card{background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.1);border-radius:var(--radius-lg);padding:22px;text-align:center}
+.cert-icon{font-size:28px;margin-bottom:8px}
+.cert-title{font-size:13px;font-weight:600;color:#fff;margin-bottom:4px}
+.cert-sub{font-size:12px;color:rgba(255,255,255,0.45)}
+
+/* HOW IT WORKS */
+#how{background:var(--ice)}
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:32px;margin-top:48px;position:relative}
+.steps::before{content:'';position:absolute;top:36px;left:calc(16.67% + 24px);right:calc(16.67% + 24px);height:1px;background:var(--border);z-index:0}
+.step{text-align:center;position:relative;z-index:1}
+.step-num{width:72px;height:72px;border-radius:50%;background:#fff;border:1px solid var(--border);display:flex;align-items:center;justify-content:center;margin:0 auto 18px;font-family:'DM Serif Display',serif;font-size:26px;color:var(--blue)}
+.step h4{font-size:15px;font-weight:600;color:var(--navy);margin-bottom:8px}
+.step p{font-size:14px;color:var(--text-secondary);line-height:1.6}
+
+/* TESTIMONIALS */
+#reviews{background:#fff}
+.reviews-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:48px}
+.review-card{border:1px solid var(--border-light);border-radius:var(--radius-lg);padding:24px;background:#fff}
+.review-stars{color:var(--blue);font-size:14px;margin-bottom:12px;letter-spacing:2px}
+.review-text{font-size:14px;color:var(--text-secondary);line-height:1.7;margin-bottom:18px;font-style:italic}
+.reviewer{display:flex;align-items:center;gap:10px}
+.reviewer-avatar{width:36px;height:36px;border-radius:50%;background:var(--blue-pale);display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:600;color:var(--blue)}
+.reviewer-name{font-size:13px;font-weight:600;color:var(--navy)}
+.reviewer-tag{font-size:11px;color:var(--text-muted)}
+
+/* CTA BANNER */
+.cta-banner{background:linear-gradient(135deg,#0A1628 0%,#1A3A6E 100%);padding:72px 5%;text-align:center;color:#fff}
+.cta-banner h2{font-family:'DM Serif Display',serif;font-size:clamp(28px,3.5vw,44px);letter-spacing:-0.02em;margin-bottom:14px}
+.cta-banner p{font-size:16px;color:rgba(255,255,255,0.6);margin-bottom:32px}
+.cta-form{display:flex;gap:10px;max-width:440px;margin:0 auto;flex-wrap:wrap}
+.cta-form input{flex:1;min-width:200px;padding:13px 18px;border-radius:var(--radius);border:none;font-size:14px;font-family:inherit;outline:none}
+.cta-form button{background:var(--blue);color:#fff;border:none;padding:13px 24px;border-radius:var(--radius);font-size:14px;font-weight:500;cursor:pointer;font-family:inherit;transition:background .2s}
+.cta-form button:hover{background:#1550b8}
+.cta-fine{font-size:12px;color:rgba(255,255,255,0.35);margin-top:12px}
+
+/* FOOTER */
+footer{background:var(--navy);color:rgba(255,255,255,0.5);padding:48px 5% 32px}
+.footer-inner{max-width:1200px;margin:0 auto}
+.footer-top{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:40px;margin-bottom:40px}
+.footer-brand .logo-text{color:#fff;font-size:20px}
+.footer-brand p{font-size:13px;color:rgba(255,255,255,0.4);margin-top:12px;line-height:1.7;max-width:240px}
+.footer-col h5{font-size:12px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,0.7);margin-bottom:16px}
+.footer-col ul{list-style:none;display:flex;flex-direction:column;gap:10px}
+.footer-col ul li a{text-decoration:none;font-size:13px;color:rgba(255,255,255,0.4);transition:color .2s}
+.footer-col ul li a:hover{color:#fff}
+.footer-bottom{border-top:1px solid rgba(255,255,255,0.08);padding-top:24px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;font-size:12px}
+.footer-disclaimer{font-size:11px;color:rgba(255,255,255,0.25);margin-top:16px;line-height:1.6}
+
+/* TOAST */
+.toast{position:fixed;bottom:24px;right:24px;background:var(--navy);color:#fff;padding:14px 20px;border-radius:var(--radius);font-size:14px;font-weight:500;transform:translateY(80px);opacity:0;transition:all .3s;z-index:999;display:flex;align-items:center;gap:8px;box-shadow:0 8px 24px rgba(0,0,0,0.2)}
+.toast.show{transform:translateY(0);opacity:1}
+.toast-dot{width:8px;height:8px;background:#4ADE80;border-radius:50%;flex-shrink:0}
+
+/* MOBILE */
+@media(max-width:768px){
+  .hero-inner{grid-template-columns:1fr}
+  .hero-visual{display:none}
+  .science-grid{grid-template-columns:1fr}
+  .steps{grid-template-columns:1fr;gap:24px}
+  .steps::before{display:none}
+  .reviews-grid{grid-template-columns:1fr}
+  .footer-top{grid-template-columns:1fr 1fr}
+  nav .nav-links{display:none}
+}
+@media(max-width:520px){
+  .footer-top{grid-template-columns:1fr}
+  .trust-bar-inner{justify-content:center}
+}
+@media(prefers-reduced-motion:reduce){
+  *{animation:none!important;transition:none!important}
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-inner">
+    <a href="#" class="logo">
+      <svg class="logo-icon" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <circle cx="18" cy="18" r="17" fill="#EBF2FD"/>
+        <g transform="rotate(-30,18,18)">
+          <!-- Strand A (front, darker blue) -->
+          <path d="M18 3 C22 6 22 10 18 13 C14 16 14 20 18 23 C22 26 22 30 18 33" stroke="#1A5FD4" stroke-width="2.2" fill="none" stroke-linecap="round"/>
+          <!-- Strand B (back, lighter blue) -->
+          <path d="M18 3 C14 6 14 10 18 13 C22 16 22 20 18 23 C14 26 14 30 18 33" stroke="#5B9BF8" stroke-width="2.2" fill="none" stroke-linecap="round"/>
+          <!-- Rungs — wider at belly, narrower at crossovers -->
+          <line x1="14.5" y1="5.5"  x2="21.5" y2="5.5"  stroke="#2D7BF0" stroke-width="1.3" stroke-linecap="round" opacity="0.85"/>
+          <line x1="13"   y1="8"    x2="23"   y2="8"    stroke="#2D7BF0" stroke-width="1.3" stroke-linecap="round" opacity="0.85"/>
+          <line x1="14.5" y1="10.5" x2="21.5" y2="10.5" stroke="#2D7BF0" stroke-width="1.3" stroke-linecap="round" opacity="0.85"/>
+          <!-- crossover at 13 — narrow -->
+          <line x1="16.5" y1="13"   x2="19.5" y2="13"   stroke="#2D7BF0" stroke-width="1"   stroke-linecap="round" opacity="0.5"/>
+          <line x1="14.5" y1="15.5" x2="21.5" y2="15.5" stroke="#2D7BF0" stroke-width="1.3" stroke-linecap="round" opacity="0.85"/>
+          <line x1="13"   y1="18"   x2="23"   y2="18"   stroke="#2D7BF0" stroke-width="1.3" stroke-linecap="round" opacity="0.85"/>
+          <line x1="14.5" y1="20.5" x2="21.5" y2="20.5" stroke="#2D7BF0" stroke-width="1.3" stroke-linecap="round" opacity="0.85"/>
+          <!-- crossover at 23 — narrow -->
+          <line x1="16.5" y1="23"   x2="19.5" y2="23"   stroke="#2D7BF0" stroke-width="1"   stroke-linecap="round" opacity="0.5"/>
+          <line x1="14.5" y1="25.5" x2="21.5" y2="25.5" stroke="#2D7BF0" stroke-width="1.3" stroke-linecap="round" opacity="0.85"/>
+          <line x1="13"   y1="28"   x2="23"   y2="28"   stroke="#2D7BF0" stroke-width="1.3" stroke-linecap="round" opacity="0.85"/>
+          <line x1="14.5" y1="30.5" x2="21.5" y2="30.5" stroke="#2D7BF0" stroke-width="1.3" stroke-linecap="round" opacity="0.85"/>
+        </g>
+      </svg>
+      <span class="logo-text">Blue <span>Helix</span> Peptides</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="#products">Products</a></li>
+      <li><a href="#science">Science</a></li>
+      <li><a href="#how">How It Works</a></li>
+      <li><a href="#reviews">Reviews</a></li>
+    </ul>
+    <div style="display:flex;align-items:center;gap:16px">
+      <a href="#" class="nav-cart" onclick="return false" aria-label="Cart">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg>
+        <span class="cart-badge" id="cartBadge">0</span>
+      </a>
+      <a href="#products" class="nav-cta">Shop Now</a>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-inner">
+    <div>
+      <p class="hero-eyebrow">Research-Grade Peptide Compounds</p>
+      <h1 class="hero-headline">Precision-formulated for <em>peak performance</em></h1>
+      <p class="hero-sub">Blue Helix Peptides delivers pharmaceutical-grade peptide compounds backed by rigorous third-party testing. For biohackers, athletes, and wellness-focused individuals who refuse to compromise on quality.</p>
+      <div class="hero-actions">
+        <a href="#products" class="btn-primary">Explore Products</a>
+        <a href="#science" class="btn-outline">Our Science</a>
+      </div>
+      <div class="hero-trust">
+        <div class="trust-item">
+          <div class="trust-num">99.2%</div>
+          <div class="trust-label">Avg. purity</div>
+        </div>
+        <div class="trust-item">
+          <div class="trust-num">3rd party</div>
+          <div class="trust-label">COA tested</div>
+        </div>
+        <div class="trust-item">
+          <div class="trust-num">48hr</div>
+          <div class="trust-label">Dispatch</div>
+        </div>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="helix-wrap">
+        <div class="helix-glow"></div>
+        <svg class="helix-svg" viewBox="0 0 320 320" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <defs>
+            <filter id="glow-f" x="-40%" y="-10%" width="180%" height="120%">
+              <feGaussianBlur stdDeviation="3.5" result="blur"/>
+              <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+            </filter>
+          </defs>
+          <g transform="rotate(-20,160,160)">
+            <path d="M160 18 C190 38 200 68 180 88 C160 108 120 118 120 148 C120 178 160 188 180 208 C200 228 200 258 160 278"
+                  stroke="#2D7BF0" stroke-width="7" fill="none" stroke-linecap="round" filter="url(#glow-f)" opacity="0.95"/>
+            <path d="M160 18 C130 38 120 68 140 88 C160 108 200 118 200 148 C200 178 160 188 140 208 C120 228 120 258 160 278"
+                  stroke="#1A5FD4" stroke-width="7" fill="none" stroke-linecap="round" opacity="0.75"/>
+            <line x1="148" y1="36"  x2="172" y2="36"  stroke="#5B9BF8" stroke-width="3.5" stroke-linecap="round" opacity="0.9"/>
+            <line x1="138" y1="54"  x2="182" y2="54"  stroke="#5B9BF8" stroke-width="3.5" stroke-linecap="round" opacity="0.9"/>
+            <line x1="132" y1="74"  x2="188" y2="74"  stroke="#5B9BF8" stroke-width="3.5" stroke-linecap="round" opacity="0.9"/>
+            <line x1="138" y1="94"  x2="182" y2="94"  stroke="#5B9BF8" stroke-width="3"   stroke-linecap="round" opacity="0.75"/>
+            <line x1="152" y1="112" x2="168" y2="112" stroke="#5B9BF8" stroke-width="2.5" stroke-linecap="round" opacity="0.5"/>
+            <line x1="138" y1="130" x2="182" y2="130" stroke="#5B9BF8" stroke-width="3"   stroke-linecap="round" opacity="0.75"/>
+            <line x1="132" y1="150" x2="188" y2="150" stroke="#5B9BF8" stroke-width="3.5" stroke-linecap="round" opacity="0.9"/>
+            <line x1="138" y1="170" x2="182" y2="170" stroke="#5B9BF8" stroke-width="3.5" stroke-linecap="round" opacity="0.9"/>
+            <line x1="145" y1="188" x2="175" y2="188" stroke="#5B9BF8" stroke-width="3"   stroke-linecap="round" opacity="0.75"/>
+            <line x1="153" y1="206" x2="167" y2="206" stroke="#5B9BF8" stroke-width="2.5" stroke-linecap="round" opacity="0.5"/>
+            <line x1="140" y1="224" x2="180" y2="224" stroke="#5B9BF8" stroke-width="3"   stroke-linecap="round" opacity="0.75"/>
+            <line x1="133" y1="242" x2="187" y2="242" stroke="#5B9BF8" stroke-width="3.5" stroke-linecap="round" opacity="0.9"/>
+            <line x1="138" y1="260" x2="182" y2="260" stroke="#5B9BF8" stroke-width="3.5" stroke-linecap="round" opacity="0.9"/>
+            <line x1="148" y1="276" x2="172" y2="276" stroke="#5B9BF8" stroke-width="3"   stroke-linecap="round" opacity="0.75"/>
+          </g>
+        </svg>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TRUST BAR -->
+<div class="trust-bar">
+  <div class="trust-bar-inner">
+    <div class="trust-bar-item">
+      <svg class="trust-icon" viewBox="0 0 24 24" fill="none" stroke="#1A5FD4" stroke-width="2" aria-hidden="true"><path d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"/></svg>
+      Certificate of Analysis on every batch
+    </div>
+    <div class="trust-bar-item">
+      <svg class="trust-icon" viewBox="0 0 24 24" fill="none" stroke="#1A5FD4" stroke-width="2" aria-hidden="true"><path d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"/></svg>
+      US-based, climate-controlled storage
+    </div>
+    <div class="trust-bar-item">
+      <svg class="trust-icon" viewBox="0 0 24 24" fill="none" stroke="#1A5FD4" stroke-width="2" aria-hidden="true"><rect x="1" y="3" width="15" height="13" rx="1"/><path d="M16 8h4l3 3v5h-7V8zM1 16h22v4H1z"/></svg>
+      Discreet, cold-chain shipping
+    </div>
+    <div class="trust-bar-item">
+      <svg class="trust-icon" viewBox="0 0 24 24" fill="none" stroke="#1A5FD4" stroke-width="2" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+      ≥99% purity, HPLC verified
+    </div>
+    <div class="trust-bar-item">
+      <svg class="trust-icon" viewBox="0 0 24 24" fill="none" stroke="#1A5FD4" stroke-width="2" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2-2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+      Expert support via email & chat
+    </div>
+  </div>
+</div>
+
+<!-- PRODUCTS -->
+<section id="products">
+  <div class="section-inner">
+    <div class="products-header">
+      <div>
+        <p class="section-eyebrow">Our Catalogue</p>
+        <h2 class="section-title">Research-grade compounds</h2>
+      </div>
+      <div class="product-filters">
+        <button class="filter-btn active" onclick="filterProducts('all',this)">All</button>
+        <button class="filter-btn" onclick="filterProducts('recovery',this)">Recovery</button>
+        <button class="filter-btn" onclick="filterProducts('performance',this)">Performance</button>
+        <button class="filter-btn" onclick="filterProducts('longevity',this)">Longevity</button>
+        <button class="filter-btn" onclick="filterProducts('weightloss',this)">Weight Loss</button>
+      </div>
+    </div>
+    <div class="products-grid" id="productGrid">
+
+      <div class="product-card" data-cat="performance" onclick="window.location.href='bpc-157.html'">
+        <div class="product-img" style="background:linear-gradient(135deg,#EBF2FD,#D1E5FC)">
+          <span class="product-badge">Best Seller</span>
+          <svg width="80" height="80" viewBox="0 0 80 80" fill="none" aria-hidden="true">
+            <circle cx="40" cy="40" r="32" fill="white" opacity=".55"/>
+            <g transform="rotate(-20,40,40)">
+              <path d="M40 6 C52 13 55 24 47 31 C39 38 27 41 27 51 C27 61 39 64 47 71 C55 78 54 89 40 94"
+                    stroke="#1A5FD4" stroke-width="3.2" fill="none" stroke-linecap="round" opacity="0.95"/>
+              <path d="M40 6 C28 13 25 24 33 31 C41 38 53 41 53 51 C53 61 41 64 33 71 C25 78 26 89 40 94"
+                    stroke="#2D7BF0" stroke-width="3.2" fill="none" stroke-linecap="round" opacity="0.72"/>
+              <line x1="35" y1="13" x2="45" y2="13" stroke="#5B9BF8" stroke-width="1.8" stroke-linecap="round" opacity="0.9"/>
+              <line x1="31" y1="21" x2="49" y2="21" stroke="#5B9BF8" stroke-width="1.8" stroke-linecap="round" opacity="0.9"/>
+              <line x1="28" y1="30" x2="52" y2="30" stroke="#5B9BF8" stroke-width="1.8" stroke-linecap="round" opacity="0.9"/>
+              <line x1="31" y1="39" x2="49" y2="39" stroke="#5B9BF8" stroke-width="1.6" stroke-linecap="round" opacity="0.7"/>
+              <line x1="37" y1="47" x2="43" y2="47" stroke="#5B9BF8" stroke-width="1.4" stroke-linecap="round" opacity="0.45"/>
+              <line x1="31" y1="55" x2="49" y2="55" stroke="#5B9BF8" stroke-width="1.6" stroke-linecap="round" opacity="0.7"/>
+              <line x1="28" y1="63" x2="52" y2="63" stroke="#5B9BF8" stroke-width="1.8" stroke-linecap="round" opacity="0.9"/>
+              <line x1="31" y1="71" x2="49" y2="71" stroke="#5B9BF8" stroke-width="1.8" stroke-linecap="round" opacity="0.9"/>
+              <line x1="35" y1="79" x2="45" y2="79" stroke="#5B9BF8" stroke-width="1.6" stroke-linecap="round" opacity="0.7"/>
+            </g>
+          </svg>
+        </div>
+        <div class="product-body">
+          <div class="product-name">BPC-157</div>
+          <div class="product-desc">Body Protection Compound. 10mg lyophilized. Supports tissue repair and gut integrity.</div>
+          <div class="product-footer">
+            <div class="product-price">$69<span>/vial</span></div>
+            <button class="add-btn" onclick="event.stopPropagation();window.location.href='bpc-157.html'">View details</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card" data-cat="recovery" onclick="window.location.href='tb-500.html'">
+        <div class="product-img" style="background:linear-gradient(135deg,#EDF7F2,#C9EDE0)">
+          <span class="product-badge new">New</span>
+          <svg width="80" height="80" viewBox="0 0 80 80" fill="none" aria-hidden="true">
+            <circle cx="40" cy="40" r="32" fill="white" opacity=".55"/>
+            <g transform="rotate(-20,40,40)">
+              <path d="M40 6 C52 13 55 24 47 31 C39 38 27 41 27 51 C27 61 39 64 47 71 C55 78 54 89 40 94"
+                    stroke="#0F6E56" stroke-width="3.2" fill="none" stroke-linecap="round" opacity="0.95"/>
+              <path d="M40 6 C28 13 25 24 33 31 C41 38 53 41 53 51 C53 61 41 64 33 71 C25 78 26 89 40 94"
+                    stroke="#1D9E75" stroke-width="3.2" fill="none" stroke-linecap="round" opacity="0.72"/>
+              <line x1="35" y1="13" x2="45" y2="13" stroke="#5B9BF8" stroke-width="1.8" stroke-linecap="round" opacity="0.9"/>
+              <line x1="31" y1="21" x2="49" y2="21" stroke="#5B9BF8" stroke-width="1.8" stroke-linecap="round" opacity="0.9"/>
+              <line x1="28" y1="30" x2="52" y2="30" stroke="#5B9BF8" stroke-width="1.8" stroke-linecap="round" opacity="0.9"/>
+              <line x1="31" y1="39" x2="49" y2="39" stroke="#5B9BF8" stroke-width="1.6" stroke-linecap="round" opacity="0.7"/>
+              <line x1="37" y1="47" x2="43" y2="47" stroke="#5B9BF8" stroke-width="1.4" stroke-linecap="round" opacity="0.45"/>
+              <line x1="31" y1="55" x2="49" y2="55" stroke="#5B9BF8" stroke-width="1.6" stroke-linecap="round" opacity="0.7"/>
+              <line x1="28" y1="63" x2="52" y2="63" stroke="#5B9BF8" stroke-width="1.8" stroke-linecap="round" opacity="0.9"/>
+              <line x1="31" y1="71" x2="49" y2="71" stroke="#5B9BF8" stroke-width="1.8" stroke-linecap="round" opacity="0.9"/>
+              <line x1="35" y1="79" x2="45" y2="79" stroke="#5B9BF8" stroke-width="1.6" stroke-linecap="round" opacity="0.7"/>
+            </g>
+          </svg>
+        </div>
+        <div class="product-body">
+          <div class="product-name">TB-500</div>
+          <div class="product-desc">Thymosin Beta-4 fragment. 10mg lyophilized. Promotes cellular repair and flexibility.</div>
+          <div class="product-footer">
+            <div class="product-price">$79<span>/vial</span></div>
+            <button class="add-btn" onclick="event.stopPropagation();window.location.href='tb-500.html'">View details</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card" data-cat="longevity" onclick="window.location.href='epithalon.html'">
+        <div class="product-img" style="background:linear-gradient(135deg,#F0EDFE,#DDD8FC)">
+          <svg width="80" height="80" viewBox="0 0 80 80" fill="none" aria-hidden="true">
+            <circle cx="40" cy="40" r="32" fill="white" opacity=".55"/>
+            <g transform="rotate(-20,40,40)">
+              <path d="M40 6 C52 13 55 24 47 31 C39 38 27 41 27 51 C27 61 39 64 47 71 C55 78 54 89 40 94"
+                    stroke="#534AB7" stroke-width="3.2" fill="none" stroke-linecap="round" opacity="0.95"/>
+              <path d="M40 6 C28 13 25 24 33 31 C41 38 53 41 53 51 C53 61 41 64 33 71 C25 78 26 89 40 94"
+                    stroke="#7F77DD" stroke-width="3.2" fill="none" stroke-linecap="round" opacity="0.72"/>
+              <line x1="35" y1="13" x2="45" y2="13" stroke="#5B9BF8" stroke-width="1.8" stroke-linecap="round" opacity="0.9"/>
+              <line x1="31" y1="21" x2="49" y2="21" stroke="#5B9BF8" stroke-width="1.8" stroke-linecap="round" opacity="0.9"/>
+              <line x1="28" y1="30" x2="52" y2="30" stroke="#5B9BF8" stroke-width="1.8" stroke-linecap="round" opacity="0.9"/>
+              <line x1="31" y1="39" x2="49" y2="39" stroke="#5B9BF8" stroke-width="1.6" stroke-linecap="round" opacity="0.7"/>
+              <line x1="37" y1="47" x2="43" y2="47" stroke="#5B9BF8" stroke-width="1.4" stroke-linecap="round" opacity="0.45"/>
+              <line x1="31" y1="55" x2="49" y2="55" stroke="#5B9BF8" stroke-width="1.6" stroke-linecap="round" opacity="0.7"/>
+              <line x1="28" y1="63" x2="52" y2="63" stroke="#5B9BF8" stroke-width="1.8" stroke-linecap="round" opacity="0.9"/>
+              <line x1="31" y1="71" x2="49" y2="71" stroke="#5B9BF8" stroke-width="1.8" stroke-linecap="round" opacity="0.9"/>
+              <line x1="35" y1="79" x2="45" y2="79" stroke="#5B9BF8" stroke-width="1.6" stroke-linecap="round" opacity="0.7"/>
+            </g>
+          </svg>
+        </div>
+        <div class="product-body">
+          <div class="product-name">Epithalon</div>
+          <div class="product-desc">Tetrapeptide. 10mg lyophilized. Studied for telomere support and longevity signaling.</div>
+          <div class="product-footer">
+            <div class="product-price">$89<span>/vial</span></div>
+            <button class="add-btn" onclick="event.stopPropagation();window.location.href='epithalon.html'">View details</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card" data-cat="performance weightloss" onclick="window.location.href='tirzepatide.html'">
+        <div class="product-img" style="background:linear-gradient(135deg,#E8F8F4,#B5EBE0)">
+          <span class="product-badge new">New</span>
+          <svg width="80" height="80" viewBox="0 0 80 80" fill="none" aria-hidden="true">
+            <circle cx="40" cy="40" r="32" fill="white" opacity=".55"/>
+            <g transform="rotate(-20,40,40)">
+              <path d="M40 6 C52 13 55 24 47 31 C39 38 27 41 27 51 C27 61 39 64 47 71 C55 78 54 89 40 94"
+                    stroke="#0E8A6E" stroke-width="3.2" fill="none" stroke-linecap="round" opacity="0.95"/>
+              <path d="M40 6 C28 13 25 24 33 31 C41 38 53 41 53 51 C53 61 41 64 33 71 C25 78 26 89 40 94"
+                    stroke="#3FC9A6" stroke-width="3.2" fill="none" stroke-linecap="round" opacity="0.72"/>
+              <line x1="35" y1="13" x2="45" y2="13" stroke="#5B9BF8" stroke-width="1.8" stroke-linecap="round" opacity="0.9"/>
+              <line x1="31" y1="21" x2="49" y2="21" stroke="#5B9BF8" stroke-width="1.8" stroke-linecap="round" opacity="0.9"/>
+              <line x1="28" y1="30" x2="52" y2="30" stroke="#5B9BF8" stroke-width="1.8" stroke-linecap="round" opacity="0.9"/>
+              <line x1="31" y1="39" x2="49" y2="39" stroke="#5B9BF8" stroke-width="1.6" stroke-linecap="round" opacity="0.7"/>
+              <line x1="37" y1="47" x2="43" y2="47" stroke="#5B9BF8" stroke-width="1.4" stroke-linecap="round" opacity="0.45"/>
+              <line x1="31" y1="55" x2="49" y2="55" stroke="#5B9BF8" stroke-width="1.6" stroke-linecap="round" opacity="0.7"/>
+              <line x1="28" y1="63" x2="52" y2="63" stroke="#5B9BF8" stroke-width="1.8" stroke-linecap="round" opacity="0.9"/>
+              <line x1="31" y1="71" x2="49" y2="71" stroke="#5B9BF8" stroke-width="1.8" stroke-linecap="round" opacity="0.9"/>
+              <line x1="35" y1="79" x2="45" y2="79" stroke="#5B9BF8" stroke-width="1.6" stroke-linecap="round" opacity="0.7"/>
+            </g>
+          </svg>
+        </div>
+        <div class="product-body">
+          <div class="product-name">Tirzepatide</div>
+          <div class="product-desc">Dual GIP/GLP-1 receptor agonist. Available in 10mg–60mg. Leading compound in metabolic research.</div>
+          <div class="product-footer">
+            <div class="product-price">From $129<span>/vial</span></div>
+            <button class="add-btn" onclick="event.stopPropagation();window.location.href='tirzepatide.html'">View options</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card" data-cat="performance weightloss" onclick="window.location.href='semaglutide.html'">
+        <div class="product-img" style="background:linear-gradient(135deg,#EEF7E8,#CFEAB5)">
+          <span class="product-badge new">New</span>
+          <svg width="80" height="80" viewBox="0 0 80 80" fill="none" aria-hidden="true">
+            <circle cx="40" cy="40" r="32" fill="white" opacity=".55"/>
+            <g transform="rotate(-20,40,40)">
+              <path d="M40 6 C52 13 55 24 47 31 C39 38 27 41 27 51 C27 61 39 64 47 71 C55 78 54 89 40 94"
+                    stroke="#4F8A1E" stroke-width="3.2" fill="none" stroke-linecap="round" opacity="0.95"/>
+              <path d="M40 6 C28 13 25 24 33 31 C41 38 53 41 53 51 C53 61 41 64 33 71 C25 78 26 89 40 94"
+                    stroke="#86C84A" stroke-width="3.2" fill="none" stroke-linecap="round" opacity="0.72"/>
+              <line x1="35" y1="13" x2="45" y2="13" stroke="#5B9BF8" stroke-width="1.8" stroke-linecap="round" opacity="0.9"/>
+              <line x1="31" y1="21" x2="49" y2="21" stroke="#5B9BF8" stroke-width="1.8" stroke-linecap="round" opacity="0.9"/>
+              <line x1="28" y1="30" x2="52" y2="30" stroke="#5B9BF8" stroke-width="1.8" stroke-linecap="round" opacity="0.9"/>
+              <line x1="31" y1="39" x2="49" y2="39" stroke="#5B9BF8" stroke-width="1.6" stroke-linecap="round" opacity="0.7"/>
+              <line x1="37" y1="47" x2="43" y2="47" stroke="#5B9BF8" stroke-width="1.4" stroke-linecap="round" opacity="0.45"/>
+              <line x1="31" y1="55" x2="49" y2="55" stroke="#5B9BF8" stroke-width="1.6" stroke-linecap="round" opacity="0.7"/>
+              <line x1="28" y1="63" x2="52" y2="63" stroke="#5B9BF8" stroke-width="1.8" stroke-linecap="round" opacity="0.9"/>
+              <line x1="31" y1="71" x2="49" y2="71" stroke="#5B9BF8" stroke-width="1.8" stroke-linecap="round" opacity="0.9"/>
+              <line x1="35" y1="79" x2="45" y2="79" stroke="#5B9BF8" stroke-width="1.6" stroke-linecap="round" opacity="0.7"/>
+            </g>
+          </svg>
+        </div>
+        <div class="product-body">
+          <div class="product-name">Semaglutide</div>
+          <div class="product-desc">GLP-1 receptor agonist. Available in 10mg–60mg. Widely studied for metabolic and appetite research.</div>
+          <div class="product-footer">
+            <div class="product-price">From $99<span>/vial</span></div>
+            <button class="add-btn" onclick="event.stopPropagation();window.location.href='semaglutide.html'">View options</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card" data-cat="performance weightloss" onclick="window.location.href='retatrutide.html'">
+        <div class="product-img" style="background:linear-gradient(135deg,#FBF0E8,#F2D1B5)">
+          <span class="product-badge new">New</span>
+          <svg width="80" height="80" viewBox="0 0 80 80" fill="none" aria-hidden="true">
+            <circle cx="40" cy="40" r="32" fill="white" opacity=".55"/>
+            <g transform="rotate(-20,40,40)">
+              <path d="M40 6 C52 13 55 24 47 31 C39 38 27 41 27 51 C27 61 39 64 47 71 C55 78 54 89 40 94"
+                    stroke="#B0560E" stroke-width="3.2" fill="none" stroke-linecap="round" opacity="0.95"/>
+              <path d="M40 6 C28 13 25 24 33 31 C41 38 53 41 53 51 C53 61 41 64 33 71 C25 78 26 89 40 94"
+                    stroke="#E08F4A" stroke-width="3.2" fill="none" stroke-linecap="round" opacity="0.72"/>
+              <line x1="35" y1="13" x2="45" y2="13" stroke="#5B9BF8" stroke-width="1.8" stroke-linecap="round" opacity="0.9"/>
+              <line x1="31" y1="21" x2="49" y2="21" stroke="#5B9BF8" stroke-width="1.8" stroke-linecap="round" opacity="0.9"/>
+              <line x1="28" y1="30" x2="52" y2="30" stroke="#5B9BF8" stroke-width="1.8" stroke-linecap="round" opacity="0.9"/>
+              <line x1="31" y1="39" x2="49" y2="39" stroke="#5B9BF8" stroke-width="1.6" stroke-linecap="round" opacity="0.7"/>
+              <line x1="37" y1="47" x2="43" y2="47" stroke="#5B9BF8" stroke-width="1.4" stroke-linecap="round" opacity="0.45"/>
+              <line x1="31" y1="55" x2="49" y2="55" stroke="#5B9BF8" stroke-width="1.6" stroke-linecap="round" opacity="0.7"/>
+              <line x1="28" y1="63" x2="52" y2="63" stroke="#5B9BF8" stroke-width="1.8" stroke-linecap="round" opacity="0.9"/>
+              <line x1="31" y1="71" x2="49" y2="71" stroke="#5B9BF8" stroke-width="1.8" stroke-linecap="round" opacity="0.9"/>
+              <line x1="35" y1="79" x2="45" y2="79" stroke="#5B9BF8" stroke-width="1.6" stroke-linecap="round" opacity="0.7"/>
+            </g>
+          </svg>
+        </div>
+        <div class="product-body">
+          <div class="product-name">Retatrutide</div>
+          <div class="product-desc">Triple GIP/GLP-1/glucagon receptor agonist. Available in 10mg–60mg. Emerging compound in metabolic research.</div>
+          <div class="product-footer">
+            <div class="product-price">From $149<span>/vial</span></div>
+            <button class="add-btn" onclick="event.stopPropagation();window.location.href='retatrutide.html'">View options</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card" data-cat="performance" onclick="window.location.href='cjc-1295.html'">
+        <div class="product-img" style="background:linear-gradient(135deg,#FFF5EB,#FCDCB0)">
+          <svg width="80" height="80" viewBox="0 0 80 80" fill="none" aria-hidden="true">
+            <circle cx="40" cy="40" r="32" fill="white" opacity=".55"/>
+            <g transform="rotate(-20,40,40)">
+              <path d="M40 6 C52 13 55 24 47 31 C39 38 27 41 27 51 C27 61 39 64 47 71 C55 78 54 89 40 94"
+                    stroke="#BA7517" stroke-width="3.2" fill="none" stroke-linecap="round" opacity="0.95"/>
+              <path d="M40 6 C28 13 25 24 33 31 C41 38 53 41 53 51 C53 61 41 64 33 71 C25 78 26 89 40 94"
+                    stroke="#EF9F27" stroke-width="3.2" fill="none" stroke-linecap="round" opacity="0.72"/>
+              <line x1="35" y1="13" x2="45" y2="13" stroke="#5B9BF8" stroke-width="1.8" stroke-linecap="round" opacity="0.9"/>
+              <line x1="31" y1="21" x2="49" y2="21" stroke="#5B9BF8" stroke-width="1.8" stroke-linecap="round" opacity="0.9"/>
+              <line x1="28" y1="30" x2="52" y2="30" stroke="#5B9BF8" stroke-width="1.8" stroke-linecap="round" opacity="0.9"/>
+              <line x1="31" y1="39" x2="49" y2="39" stroke="#5B9BF8" stroke-width="1.6" stroke-linecap="round" opacity="0.7"/>
+              <line x1="37" y1="47" x2="43" y2="47" stroke="#5B9BF8" stroke-width="1.4" stroke-linecap="round" opacity="0.45"/>
+              <line x1="31" y1="55" x2="49" y2="55" stroke="#5B9BF8" stroke-width="1.6" stroke-linecap="round" opacity="0.7"/>
+              <line x1="28" y1="63" x2="52" y2="63" stroke="#5B9BF8" stroke-width="1.8" stroke-linecap="round" opacity="0.9"/>
+              <line x1="31" y1="71" x2="49" y2="71" stroke="#5B9BF8" stroke-width="1.8" stroke-linecap="round" opacity="0.9"/>
+              <line x1="35" y1="79" x2="45" y2="79" stroke="#5B9BF8" stroke-width="1.6" stroke-linecap="round" opacity="0.7"/>
+            </g>
+          </svg>
+        </div>
+        <div class="product-body">
+          <div class="product-name">CJC-1295</div>
+          <div class="product-desc">GHRH analogue. 2mg lyophilized. Supports GH pulse amplitude and body composition.</div>
+          <div class="product-footer">
+            <div class="product-price">$74<span>/vial</span></div>
+            <button class="add-btn" onclick="event.stopPropagation();window.location.href='cjc-1295.html'">View details</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card" data-cat="recovery" onclick="window.location.href='ipamorelin.html'">
+        <div class="product-img" style="background:linear-gradient(135deg,#FEF0F0,#FAC8C8)">
+          <svg width="80" height="80" viewBox="0 0 80 80" fill="none" aria-hidden="true">
+            <circle cx="40" cy="40" r="32" fill="white" opacity=".55"/>
+            <g transform="rotate(-20,40,40)">
+              <path d="M40 6 C52 13 55 24 47 31 C39 38 27 41 27 51 C27 61 39 64 47 71 C55 78 54 89 40 94"
+                    stroke="#A32D2D" stroke-width="3.2" fill="none" stroke-linecap="round" opacity="0.95"/>
+              <path d="M40 6 C28 13 25 24 33 31 C41 38 53 41 53 51 C53 61 41 64 33 71 C25 78 26 89 40 94"
+                    stroke="#E24B4A" stroke-width="3.2" fill="none" stroke-linecap="round" opacity="0.72"/>
+              <line x1="35" y1="13" x2="45" y2="13" stroke="#5B9BF8" stroke-width="1.8" stroke-linecap="round" opacity="0.9"/>
+              <line x1="31" y1="21" x2="49" y2="21" stroke="#5B9BF8" stroke-width="1.8" stroke-linecap="round" opacity="0.9"/>
+              <line x1="28" y1="30" x2="52" y2="30" stroke="#5B9BF8" stroke-width="1.8" stroke-linecap="round" opacity="0.9"/>
+              <line x1="31" y1="39" x2="49" y2="39" stroke="#5B9BF8" stroke-width="1.6" stroke-linecap="round" opacity="0.7"/>
+              <line x1="37" y1="47" x2="43" y2="47" stroke="#5B9BF8" stroke-width="1.4" stroke-linecap="round" opacity="0.45"/>
+              <line x1="31" y1="55" x2="49" y2="55" stroke="#5B9BF8" stroke-width="1.6" stroke-linecap="round" opacity="0.7"/>
+              <line x1="28" y1="63" x2="52" y2="63" stroke="#5B9BF8" stroke-width="1.8" stroke-linecap="round" opacity="0.9"/>
+              <line x1="31" y1="71" x2="49" y2="71" stroke="#5B9BF8" stroke-width="1.8" stroke-linecap="round" opacity="0.9"/>
+              <line x1="35" y1="79" x2="45" y2="79" stroke="#5B9BF8" stroke-width="1.6" stroke-linecap="round" opacity="0.7"/>
+            </g>
+          </svg>
+        </div>
+        <div class="product-body">
+          <div class="product-name">Ipamorelin</div>
+          <div class="product-desc">Selective GH secretagogue. 10mg lyophilized. Clean GH release with minimal cortisol response.</div>
+          <div class="product-footer">
+            <div class="product-price">$64<span>/vial</span></div>
+            <button class="add-btn" onclick="event.stopPropagation();window.location.href='ipamorelin.html'">View details</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card" data-cat="longevity" onclick="window.location.href='selank.html'">
+        <div class="product-img" style="background:linear-gradient(135deg,#EBF2FD,#BDDAFA)">
+          <span class="product-badge">Popular</span>
+          <svg width="80" height="80" viewBox="0 0 80 80" fill="none" aria-hidden="true">
+            <circle cx="40" cy="40" r="32" fill="white" opacity=".55"/>
+            <g transform="rotate(-20,40,40)">
+              <path d="M40 6 C52 13 55 24 47 31 C39 38 27 41 27 51 C27 61 39 64 47 71 C55 78 54 89 40 94"
+                    stroke="#185FA5" stroke-width="3.2" fill="none" stroke-linecap="round" opacity="0.95"/>
+              <path d="M40 6 C28 13 25 24 33 31 C41 38 53 41 53 51 C53 61 41 64 33 71 C25 78 26 89 40 94"
+                    stroke="#378ADD" stroke-width="3.2" fill="none" stroke-linecap="round" opacity="0.72"/>
+              <line x1="35" y1="13" x2="45" y2="13" stroke="#5B9BF8" stroke-width="1.8" stroke-linecap="round" opacity="0.9"/>
+              <line x1="31" y1="21" x2="49" y2="21" stroke="#5B9BF8" stroke-width="1.8" stroke-linecap="round" opacity="0.9"/>
+              <line x1="28" y1="30" x2="52" y2="30" stroke="#5B9BF8" stroke-width="1.8" stroke-linecap="round" opacity="0.9"/>
+              <line x1="31" y1="39" x2="49" y2="39" stroke="#5B9BF8" stroke-width="1.6" stroke-linecap="round" opacity="0.7"/>
+              <line x1="37" y1="47" x2="43" y2="47" stroke="#5B9BF8" stroke-width="1.4" stroke-linecap="round" opacity="0.45"/>
+              <line x1="31" y1="55" x2="49" y2="55" stroke="#5B9BF8" stroke-width="1.6" stroke-linecap="round" opacity="0.7"/>
+              <line x1="28" y1="63" x2="52" y2="63" stroke="#5B9BF8" stroke-width="1.8" stroke-linecap="round" opacity="0.9"/>
+              <line x1="31" y1="71" x2="49" y2="71" stroke="#5B9BF8" stroke-width="1.8" stroke-linecap="round" opacity="0.9"/>
+              <line x1="35" y1="79" x2="45" y2="79" stroke="#5B9BF8" stroke-width="1.6" stroke-linecap="round" opacity="0.7"/>
+            </g>
+          </svg>
+        </div>
+        <div class="product-body">
+          <div class="product-name">Selank</div>
+          <div class="product-desc">Anxiolytic heptapeptide. 10mg lyophilized. Cognitive and stress modulation research compound.</div>
+          <div class="product-footer">
+            <div class="product-price">$59<span>/vial</span></div>
+            <button class="add-btn" onclick="event.stopPropagation();window.location.href='selank.html'">View details</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card" data-cat="recovery longevity" onclick="window.location.href='glow-blend.html'">
+        <div class="product-img" style="background:linear-gradient(135deg,#FDF0F5,#F5C6DC)">
+          <span class="product-badge new">New</span>
+          <svg width="80" height="80" viewBox="0 0 80 80" fill="none" aria-hidden="true">
+            <circle cx="40" cy="40" r="32" fill="white" opacity=".55"/>
+            <g transform="rotate(-20,40,40)">
+              <path d="M40 6 C52 13 55 24 47 31 C39 38 27 41 27 51 C27 61 39 64 47 71 C55 78 54 89 40 94"
+                    stroke="#C2417A" stroke-width="3.2" fill="none" stroke-linecap="round" opacity="0.95"/>
+              <path d="M40 6 C28 13 25 24 33 31 C41 38 53 41 53 51 C53 61 41 64 33 71 C25 78 26 89 40 94"
+                    stroke="#EB7BAE" stroke-width="3.2" fill="none" stroke-linecap="round" opacity="0.72"/>
+              <line x1="35" y1="13" x2="45" y2="13" stroke="#5B9BF8" stroke-width="1.8" stroke-linecap="round" opacity="0.9"/>
+              <line x1="31" y1="21" x2="49" y2="21" stroke="#5B9BF8" stroke-width="1.8" stroke-linecap="round" opacity="0.9"/>
+              <line x1="28" y1="30" x2="52" y2="30" stroke="#5B9BF8" stroke-width="1.8" stroke-linecap="round" opacity="0.9"/>
+              <line x1="31" y1="39" x2="49" y2="39" stroke="#5B9BF8" stroke-width="1.6" stroke-linecap="round" opacity="0.7"/>
+              <line x1="37" y1="47" x2="43" y2="47" stroke="#5B9BF8" stroke-width="1.4" stroke-linecap="round" opacity="0.45"/>
+              <line x1="31" y1="55" x2="49" y2="55" stroke="#5B9BF8" stroke-width="1.6" stroke-linecap="round" opacity="0.7"/>
+              <line x1="28" y1="63" x2="52" y2="63" stroke="#5B9BF8" stroke-width="1.8" stroke-linecap="round" opacity="0.9"/>
+              <line x1="31" y1="71" x2="49" y2="71" stroke="#5B9BF8" stroke-width="1.8" stroke-linecap="round" opacity="0.9"/>
+              <line x1="35" y1="79" x2="45" y2="79" stroke="#5B9BF8" stroke-width="1.6" stroke-linecap="round" opacity="0.7"/>
+            </g>
+          </svg>
+        </div>
+        <div class="product-body">
+          <div class="product-name">GLOW 70mg Blend</div>
+          <div class="product-desc">50mg GHK-Cu, 10mg BPC-157, 10mg TB-500. Synergistic blend for skin, tissue repair, and recovery research.</div>
+          <div class="product-footer">
+            <div class="product-price">$119<span>/vial</span></div>
+            <button class="add-btn" onclick="event.stopPropagation();window.location.href='glow-blend.html'">View details</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card" data-cat="recovery longevity" onclick="window.location.href='klow-blend.html'">
+        <div class="product-img" style="background:linear-gradient(135deg,#F3EEFB,#D9C8F2)">
+          <span class="product-badge new">New</span>
+          <svg width="80" height="80" viewBox="0 0 80 80" fill="none" aria-hidden="true">
+            <circle cx="40" cy="40" r="32" fill="white" opacity=".55"/>
+            <g transform="rotate(-20,40,40)">
+              <path d="M40 6 C52 13 55 24 47 31 C39 38 27 41 27 51 C27 61 39 64 47 71 C55 78 54 89 40 94"
+                    stroke="#7038B0" stroke-width="3.2" fill="none" stroke-linecap="round" opacity="0.95"/>
+              <path d="M40 6 C28 13 25 24 33 31 C41 38 53 41 53 51 C53 61 41 64 33 71 C25 78 26 89 40 94"
+                    stroke="#A578E0" stroke-width="3.2" fill="none" stroke-linecap="round" opacity="0.72"/>
+              <line x1="35" y1="13" x2="45" y2="13" stroke="#5B9BF8" stroke-width="1.8" stroke-linecap="round" opacity="0.9"/>
+              <line x1="31" y1="21" x2="49" y2="21" stroke="#5B9BF8" stroke-width="1.8" stroke-linecap="round" opacity="0.9"/>
+              <line x1="28" y1="30" x2="52" y2="30" stroke="#5B9BF8" stroke-width="1.8" stroke-linecap="round" opacity="0.9"/>
+              <line x1="31" y1="39" x2="49" y2="39" stroke="#5B9BF8" stroke-width="1.6" stroke-linecap="round" opacity="0.7"/>
+              <line x1="37" y1="47" x2="43" y2="47" stroke="#5B9BF8" stroke-width="1.4" stroke-linecap="round" opacity="0.45"/>
+              <line x1="31" y1="55" x2="49" y2="55" stroke="#5B9BF8" stroke-width="1.6" stroke-linecap="round" opacity="0.7"/>
+              <line x1="28" y1="63" x2="52" y2="63" stroke="#5B9BF8" stroke-width="1.8" stroke-linecap="round" opacity="0.9"/>
+              <line x1="31" y1="71" x2="49" y2="71" stroke="#5B9BF8" stroke-width="1.8" stroke-linecap="round" opacity="0.9"/>
+              <line x1="35" y1="79" x2="45" y2="79" stroke="#5B9BF8" stroke-width="1.6" stroke-linecap="round" opacity="0.7"/>
+            </g>
+          </svg>
+        </div>
+        <div class="product-body">
+          <div class="product-name">KLOW 80mg Blend</div>
+          <div class="product-desc">50mg GHK-Cu, 10mg BPC-157, 10mg TB-500, 10mg KPV. Enhanced GLOW formula with added anti-inflammatory research support.</div>
+          <div class="product-footer">
+            <div class="product-price">$139<span>/vial</span></div>
+            <button class="add-btn" onclick="event.stopPropagation();window.location.href='klow-blend.html'">View details</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card" data-cat="performance" onclick="window.location.href='pt-141.html'">
+        <div class="product-img" style="background:linear-gradient(135deg,#FDEFF2,#F6C7D3)">
+          <svg width="80" height="80" viewBox="0 0 80 80" fill="none" aria-hidden="true">
+            <circle cx="40" cy="40" r="32" fill="white" opacity=".55"/>
+            <g transform="rotate(-20,40,40)">
+              <path d="M40 6 C52 13 55 24 47 31 C39 38 27 41 27 51 C27 61 39 64 47 71 C55 78 54 89 40 94"
+                    stroke="#B5305A" stroke-width="3.2" fill="none" stroke-linecap="round" opacity="0.95"/>
+              <path d="M40 6 C28 13 25 24 33 31 C41 38 53 41 53 51 C53 61 41 64 33 71 C25 78 26 89 40 94"
+                    stroke="#E37896" stroke-width="3.2" fill="none" stroke-linecap="round" opacity="0.72"/>
+              <line x1="35" y1="13" x2="45" y2="13" stroke="#5B9BF8" stroke-width="1.8" stroke-linecap="round" opacity="0.9"/>
+              <line x1="31" y1="21" x2="49" y2="21" stroke="#5B9BF8" stroke-width="1.8" stroke-linecap="round" opacity="0.9"/>
+              <line x1="28" y1="30" x2="52" y2="30" stroke="#5B9BF8" stroke-width="1.8" stroke-linecap="round" opacity="0.9"/>
+              <line x1="31" y1="39" x2="49" y2="39" stroke="#5B9BF8" stroke-width="1.6" stroke-linecap="round" opacity="0.7"/>
+              <line x1="37" y1="47" x2="43" y2="47" stroke="#5B9BF8" stroke-width="1.4" stroke-linecap="round" opacity="0.45"/>
+              <line x1="31" y1="55" x2="49" y2="55" stroke="#5B9BF8" stroke-width="1.6" stroke-linecap="round" opacity="0.7"/>
+              <line x1="28" y1="63" x2="52" y2="63" stroke="#5B9BF8" stroke-width="1.8" stroke-linecap="round" opacity="0.9"/>
+              <line x1="31" y1="71" x2="49" y2="71" stroke="#5B9BF8" stroke-width="1.8" stroke-linecap="round" opacity="0.9"/>
+              <line x1="35" y1="79" x2="45" y2="79" stroke="#5B9BF8" stroke-width="1.6" stroke-linecap="round" opacity="0.7"/>
+            </g>
+          </svg>
+        </div>
+        <div class="product-body">
+          <div class="product-name">PT-141</div>
+          <div class="product-desc">Bremelanotide. 10mg lyophilized. Melanocortin receptor agonist studied for libido and arousal research.</div>
+          <div class="product-footer">
+            <div class="product-price">$79<span>/vial</span></div>
+            <button class="add-btn" onclick="event.stopPropagation();window.location.href='pt-141.html'">View details</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card" data-cat="performance" onclick="window.location.href='cjc-1295-no-dac.html'">
+        <div class="product-img" style="background:linear-gradient(135deg,#FFF7EC,#FAE0B8)">
+          <svg width="80" height="80" viewBox="0 0 80 80" fill="none" aria-hidden="true">
+            <circle cx="40" cy="40" r="32" fill="white" opacity=".55"/>
+            <g transform="rotate(-20,40,40)">
+              <path d="M40 6 C52 13 55 24 47 31 C39 38 27 41 27 51 C27 61 39 64 47 71 C55 78 54 89 40 94"
+                    stroke="#C68312" stroke-width="3.2" fill="none" stroke-linecap="round" opacity="0.95"/>
+              <path d="M40 6 C28 13 25 24 33 31 C41 38 53 41 53 51 C53 61 41 64 33 71 C25 78 26 89 40 94"
+                    stroke="#F2B142" stroke-width="3.2" fill="none" stroke-linecap="round" opacity="0.72"/>
+              <line x1="35" y1="13" x2="45" y2="13" stroke="#5B9BF8" stroke-width="1.8" stroke-linecap="round" opacity="0.9"/>
+              <line x1="31" y1="21" x2="49" y2="21" stroke="#5B9BF8" stroke-width="1.8" stroke-linecap="round" opacity="0.9"/>
+              <line x1="28" y1="30" x2="52" y2="30" stroke="#5B9BF8" stroke-width="1.8" stroke-linecap="round" opacity="0.9"/>
+              <line x1="31" y1="39" x2="49" y2="39" stroke="#5B9BF8" stroke-width="1.6" stroke-linecap="round" opacity="0.7"/>
+              <line x1="37" y1="47" x2="43" y2="47" stroke="#5B9BF8" stroke-width="1.4" stroke-linecap="round" opacity="0.45"/>
+              <line x1="31" y1="55" x2="49" y2="55" stroke="#5B9BF8" stroke-width="1.6" stroke-linecap="round" opacity="0.7"/>
+              <line x1="28" y1="63" x2="52" y2="63" stroke="#5B9BF8" stroke-width="1.8" stroke-linecap="round" opacity="0.9"/>
+              <line x1="31" y1="71" x2="49" y2="71" stroke="#5B9BF8" stroke-width="1.8" stroke-linecap="round" opacity="0.9"/>
+              <line x1="35" y1="79" x2="45" y2="79" stroke="#5B9BF8" stroke-width="1.6" stroke-linecap="round" opacity="0.7"/>
+            </g>
+          </svg>
+        </div>
+        <div class="product-body">
+          <div class="product-name">CJC-1295 (No DAC)</div>
+          <div class="product-desc">GHRH analogue, modified GRF 1-29. 10mg lyophilized. Shorter half-life for pulsatile GH release research.</div>
+          <div class="product-footer">
+            <div class="product-price">$84<span>/vial</span></div>
+            <button class="add-btn" onclick="event.stopPropagation();window.location.href='cjc-1295-no-dac.html'">View details</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card" data-cat="performance weightloss" onclick="window.location.href='cagrilintide.html'">
+        <div class="product-img" style="background:linear-gradient(135deg,#EAF6F7,#BEE4E8)">
+          <span class="product-badge new">New</span>
+          <svg width="80" height="80" viewBox="0 0 80 80" fill="none" aria-hidden="true">
+            <circle cx="40" cy="40" r="32" fill="white" opacity=".55"/>
+            <g transform="rotate(-20,40,40)">
+              <path d="M40 6 C52 13 55 24 47 31 C39 38 27 41 27 51 C27 61 39 64 47 71 C55 78 54 89 40 94"
+                    stroke="#127480" stroke-width="3.2" fill="none" stroke-linecap="round" opacity="0.95"/>
+              <path d="M40 6 C28 13 25 24 33 31 C41 38 53 41 53 51 C53 61 41 64 33 71 C25 78 26 89 40 94"
+                    stroke="#4FB3C0" stroke-width="3.2" fill="none" stroke-linecap="round" opacity="0.72"/>
+              <line x1="35" y1="13" x2="45" y2="13" stroke="#5B9BF8" stroke-width="1.8" stroke-linecap="round" opacity="0.9"/>
+              <line x1="31" y1="21" x2="49" y2="21" stroke="#5B9BF8" stroke-width="1.8" stroke-linecap="round" opacity="0.9"/>
+              <line x1="28" y1="30" x2="52" y2="30" stroke="#5B9BF8" stroke-width="1.8" stroke-linecap="round" opacity="0.9"/>
+              <line x1="31" y1="39" x2="49" y2="39" stroke="#5B9BF8" stroke-width="1.6" stroke-linecap="round" opacity="0.7"/>
+              <line x1="37" y1="47" x2="43" y2="47" stroke="#5B9BF8" stroke-width="1.4" stroke-linecap="round" opacity="0.45"/>
+              <line x1="31" y1="55" x2="49" y2="55" stroke="#5B9BF8" stroke-width="1.6" stroke-linecap="round" opacity="0.7"/>
+              <line x1="28" y1="63" x2="52" y2="63" stroke="#5B9BF8" stroke-width="1.8" stroke-linecap="round" opacity="0.9"/>
+              <line x1="31" y1="71" x2="49" y2="71" stroke="#5B9BF8" stroke-width="1.8" stroke-linecap="round" opacity="0.9"/>
+              <line x1="35" y1="79" x2="45" y2="79" stroke="#5B9BF8" stroke-width="1.6" stroke-linecap="round" opacity="0.7"/>
+            </g>
+          </svg>
+        </div>
+        <div class="product-body">
+          <div class="product-name">Cagrilintide</div>
+          <div class="product-desc">Long-acting amylin analogue. 10mg lyophilized. Studied for appetite regulation and metabolic research, often paired with GLP-1 agonists.</div>
+          <div class="product-footer">
+            <div class="product-price">$109<span>/vial</span></div>
+            <button class="add-btn" onclick="event.stopPropagation();window.location.href='cagrilintide.html'">View details</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card" data-cat="recovery longevity" onclick="window.location.href='ghk-cu.html'">
+        <div class="product-img" style="background:linear-gradient(135deg,#F1F0FB,#D4D1F2)">
+          <svg width="80" height="80" viewBox="0 0 80 80" fill="none" aria-hidden="true">
+            <circle cx="40" cy="40" r="32" fill="white" opacity=".55"/>
+            <g transform="rotate(-20,40,40)">
+              <path d="M40 6 C52 13 55 24 47 31 C39 38 27 41 27 51 C27 61 39 64 47 71 C55 78 54 89 40 94"
+                    stroke="#5347A8" stroke-width="3.2" fill="none" stroke-linecap="round" opacity="0.95"/>
+              <path d="M40 6 C28 13 25 24 33 31 C41 38 53 41 53 51 C53 61 41 64 33 71 C25 78 26 89 40 94"
+                    stroke="#8C82DB" stroke-width="3.2" fill="none" stroke-linecap="round" opacity="0.72"/>
+              <line x1="35" y1="13" x2="45" y2="13" stroke="#5B9BF8" stroke-width="1.8" stroke-linecap="round" opacity="0.9"/>
+              <line x1="31" y1="21" x2="49" y2="21" stroke="#5B9BF8" stroke-width="1.8" stroke-linecap="round" opacity="0.9"/>
+              <line x1="28" y1="30" x2="52" y2="30" stroke="#5B9BF8" stroke-width="1.8" stroke-linecap="round" opacity="0.9"/>
+              <line x1="31" y1="39" x2="49" y2="39" stroke="#5B9BF8" stroke-width="1.6" stroke-linecap="round" opacity="0.7"/>
+              <line x1="37" y1="47" x2="43" y2="47" stroke="#5B9BF8" stroke-width="1.4" stroke-linecap="round" opacity="0.45"/>
+              <line x1="31" y1="55" x2="49" y2="55" stroke="#5B9BF8" stroke-width="1.6" stroke-linecap="round" opacity="0.7"/>
+              <line x1="28" y1="63" x2="52" y2="63" stroke="#5B9BF8" stroke-width="1.8" stroke-linecap="round" opacity="0.9"/>
+              <line x1="31" y1="71" x2="49" y2="71" stroke="#5B9BF8" stroke-width="1.8" stroke-linecap="round" opacity="0.9"/>
+              <line x1="35" y1="79" x2="45" y2="79" stroke="#5B9BF8" stroke-width="1.6" stroke-linecap="round" opacity="0.7"/>
+            </g>
+          </svg>
+        </div>
+        <div class="product-body">
+          <div class="product-name">GHK-Cu</div>
+          <div class="product-desc">Copper peptide. 50mg lyophilized. Studied for skin remodeling, collagen synthesis, and anti-aging research.</div>
+          <div class="product-footer">
+            <div class="product-price">$74<span>/vial</span></div>
+            <button class="add-btn" onclick="event.stopPropagation();window.location.href='ghk-cu.html'">View details</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card" data-cat="performance" onclick="window.location.href='melanotan-ii.html'">
+        <div class="product-img" style="background:linear-gradient(135deg,#FBF1E6,#F0D5AC)">
+          <svg width="80" height="80" viewBox="0 0 80 80" fill="none" aria-hidden="true">
+            <circle cx="40" cy="40" r="32" fill="white" opacity=".55"/>
+            <g transform="rotate(-20,40,40)">
+              <path d="M40 6 C52 13 55 24 47 31 C39 38 27 41 27 51 C27 61 39 64 47 71 C55 78 54 89 40 94"
+                    stroke="#9A5A14" stroke-width="3.2" fill="none" stroke-linecap="round" opacity="0.95"/>
+              <path d="M40 6 C28 13 25 24 33 31 C41 38 53 41 53 51 C53 61 41 64 33 71 C25 78 26 89 40 94"
+                    stroke="#D29A52" stroke-width="3.2" fill="none" stroke-linecap="round" opacity="0.72"/>
+              <line x1="35" y1="13" x2="45" y2="13" stroke="#5B9BF8" stroke-width="1.8" stroke-linecap="round" opacity="0.9"/>
+              <line x1="31" y1="21" x2="49" y2="21" stroke="#5B9BF8" stroke-width="1.8" stroke-linecap="round" opacity="0.9"/>
+              <line x1="28" y1="30" x2="52" y2="30" stroke="#5B9BF8" stroke-width="1.8" stroke-linecap="round" opacity="0.9"/>
+              <line x1="31" y1="39" x2="49" y2="39" stroke="#5B9BF8" stroke-width="1.6" stroke-linecap="round" opacity="0.7"/>
+              <line x1="37" y1="47" x2="43" y2="47" stroke="#5B9BF8" stroke-width="1.4" stroke-linecap="round" opacity="0.45"/>
+              <line x1="31" y1="55" x2="49" y2="55" stroke="#5B9BF8" stroke-width="1.6" stroke-linecap="round" opacity="0.7"/>
+              <line x1="28" y1="63" x2="52" y2="63" stroke="#5B9BF8" stroke-width="1.8" stroke-linecap="round" opacity="0.9"/>
+              <line x1="31" y1="71" x2="49" y2="71" stroke="#5B9BF8" stroke-width="1.8" stroke-linecap="round" opacity="0.9"/>
+              <line x1="35" y1="79" x2="45" y2="79" stroke="#5B9BF8" stroke-width="1.6" stroke-linecap="round" opacity="0.7"/>
+            </g>
+          </svg>
+        </div>
+        <div class="product-body">
+          <div class="product-name">Melanotan II</div>
+          <div class="product-desc">Melanocortin receptor agonist. 10mg lyophilized. Studied for pigmentation and appetite-related research.</div>
+          <div class="product-footer">
+            <div class="product-price">$69<span>/vial</span></div>
+            <button class="add-btn" onclick="event.stopPropagation();window.location.href='melanotan-ii.html'">View details</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card" data-cat="performance" onclick="window.location.href='tesamorelin.html'">
+        <div class="product-img" style="background:linear-gradient(135deg,#EAF3FB,#BBDCF5)">
+          <svg width="80" height="80" viewBox="0 0 80 80" fill="none" aria-hidden="true">
+            <circle cx="40" cy="40" r="32" fill="white" opacity=".55"/>
+            <g transform="rotate(-20,40,40)">
+              <path d="M40 6 C52 13 55 24 47 31 C39 38 27 41 27 51 C27 61 39 64 47 71 C55 78 54 89 40 94"
+                    stroke="#1561A8" stroke-width="3.2" fill="none" stroke-linecap="round" opacity="0.95"/>
+              <path d="M40 6 C28 13 25 24 33 31 C41 38 53 41 53 51 C53 61 41 64 33 71 C25 78 26 89 40 94"
+                    stroke="#5AA4E0" stroke-width="3.2" fill="none" stroke-linecap="round" opacity="0.72"/>
+              <line x1="35" y1="13" x2="45" y2="13" stroke="#5B9BF8" stroke-width="1.8" stroke-linecap="round" opacity="0.9"/>
+              <line x1="31" y1="21" x2="49" y2="21" stroke="#5B9BF8" stroke-width="1.8" stroke-linecap="round" opacity="0.9"/>
+              <line x1="28" y1="30" x2="52" y2="30" stroke="#5B9BF8" stroke-width="1.8" stroke-linecap="round" opacity="0.9"/>
+              <line x1="31" y1="39" x2="49" y2="39" stroke="#5B9BF8" stroke-width="1.6" stroke-linecap="round" opacity="0.7"/>
+              <line x1="37" y1="47" x2="43" y2="47" stroke="#5B9BF8" stroke-width="1.4" stroke-linecap="round" opacity="0.45"/>
+              <line x1="31" y1="55" x2="49" y2="55" stroke="#5B9BF8" stroke-width="1.6" stroke-linecap="round" opacity="0.7"/>
+              <line x1="28" y1="63" x2="52" y2="63" stroke="#5B9BF8" stroke-width="1.8" stroke-linecap="round" opacity="0.9"/>
+              <line x1="31" y1="71" x2="49" y2="71" stroke="#5B9BF8" stroke-width="1.8" stroke-linecap="round" opacity="0.9"/>
+              <line x1="35" y1="79" x2="45" y2="79" stroke="#5B9BF8" stroke-width="1.6" stroke-linecap="round" opacity="0.7"/>
+            </g>
+          </svg>
+        </div>
+        <div class="product-body">
+          <div class="product-name">Tesamorelin</div>
+          <div class="product-desc">GHRH analogue. 10mg lyophilized. Studied for visceral fat reduction and growth hormone axis research.</div>
+          <div class="product-footer">
+            <div class="product-price">$99<span>/vial</span></div>
+            <button class="add-btn" onclick="event.stopPropagation();window.location.href='tesamorelin.html'">View details</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card" data-cat="performance" onclick="window.location.href='sermorelin.html'">
+        <div class="product-img" style="background:linear-gradient(135deg,#EBF5F0,#C5E8D6)">
+          <svg width="80" height="80" viewBox="0 0 80 80" fill="none" aria-hidden="true">
+            <circle cx="40" cy="40" r="32" fill="white" opacity=".55"/>
+            <g transform="rotate(-20,40,40)">
+              <path d="M40 6 C52 13 55 24 47 31 C39 38 27 41 27 51 C27 61 39 64 47 71 C55 78 54 89 40 94"
+                    stroke="#1B7A52" stroke-width="3.2" fill="none" stroke-linecap="round" opacity="0.95"/>
+              <path d="M40 6 C28 13 25 24 33 31 C41 38 53 41 53 51 C53 61 41 64 33 71 C25 78 26 89 40 94"
+                    stroke="#5BC18C" stroke-width="3.2" fill="none" stroke-linecap="round" opacity="0.72"/>
+              <line x1="35" y1="13" x2="45" y2="13" stroke="#5B9BF8" stroke-width="1.8" stroke-linecap="round" opacity="0.9"/>
+              <line x1="31" y1="21" x2="49" y2="21" stroke="#5B9BF8" stroke-width="1.8" stroke-linecap="round" opacity="0.9"/>
+              <line x1="28" y1="30" x2="52" y2="30" stroke="#5B9BF8" stroke-width="1.8" stroke-linecap="round" opacity="0.9"/>
+              <line x1="31" y1="39" x2="49" y2="39" stroke="#5B9BF8" stroke-width="1.6" stroke-linecap="round" opacity="0.7"/>
+              <line x1="37" y1="47" x2="43" y2="47" stroke="#5B9BF8" stroke-width="1.4" stroke-linecap="round" opacity="0.45"/>
+              <line x1="31" y1="55" x2="49" y2="55" stroke="#5B9BF8" stroke-width="1.6" stroke-linecap="round" opacity="0.7"/>
+              <line x1="28" y1="63" x2="52" y2="63" stroke="#5B9BF8" stroke-width="1.8" stroke-linecap="round" opacity="0.9"/>
+              <line x1="31" y1="71" x2="49" y2="71" stroke="#5B9BF8" stroke-width="1.8" stroke-linecap="round" opacity="0.9"/>
+              <line x1="35" y1="79" x2="45" y2="79" stroke="#5B9BF8" stroke-width="1.6" stroke-linecap="round" opacity="0.7"/>
+            </g>
+          </svg>
+        </div>
+        <div class="product-body">
+          <div class="product-name">Sermorelin</div>
+          <div class="product-desc">GHRH analogue. 10mg lyophilized. Studied for growth hormone secretion and pituitary function research.</div>
+          <div class="product-footer">
+            <div class="product-price">$79<span>/vial</span></div>
+            <button class="add-btn" onclick="event.stopPropagation();window.location.href='sermorelin.html'">View details</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card" data-cat="recovery longevity" onclick="window.location.href='kpv.html'">
+        <div class="product-img" style="background:linear-gradient(135deg,#F0F6E8,#D6EBB5)">
+          <svg width="80" height="80" viewBox="0 0 80 80" fill="none" aria-hidden="true">
+            <circle cx="40" cy="40" r="32" fill="white" opacity=".55"/>
+            <g transform="rotate(-20,40,40)">
+              <path d="M40 6 C52 13 55 24 47 31 C39 38 27 41 27 51 C27 61 39 64 47 71 C55 78 54 89 40 94"
+                    stroke="#5C8A1E" stroke-width="3.2" fill="none" stroke-linecap="round" opacity="0.95"/>
+              <path d="M40 6 C28 13 25 24 33 31 C41 38 53 41 53 51 C53 61 41 64 33 71 C25 78 26 89 40 94"
+                    stroke="#9BC44E" stroke-width="3.2" fill="none" stroke-linecap="round" opacity="0.72"/>
+              <line x1="35" y1="13" x2="45" y2="13" stroke="#5B9BF8" stroke-width="1.8" stroke-linecap="round" opacity="0.9"/>
+              <line x1="31" y1="21" x2="49" y2="21" stroke="#5B9BF8" stroke-width="1.8" stroke-linecap="round" opacity="0.9"/>
+              <line x1="28" y1="30" x2="52" y2="30" stroke="#5B9BF8" stroke-width="1.8" stroke-linecap="round" opacity="0.9"/>
+              <line x1="31" y1="39" x2="49" y2="39" stroke="#5B9BF8" stroke-width="1.6" stroke-linecap="round" opacity="0.7"/>
+              <line x1="37" y1="47" x2="43" y2="47" stroke="#5B9BF8" stroke-width="1.4" stroke-linecap="round" opacity="0.45"/>
+              <line x1="31" y1="55" x2="49" y2="55" stroke="#5B9BF8" stroke-width="1.6" stroke-linecap="round" opacity="0.7"/>
+              <line x1="28" y1="63" x2="52" y2="63" stroke="#5B9BF8" stroke-width="1.8" stroke-linecap="round" opacity="0.9"/>
+              <line x1="31" y1="71" x2="49" y2="71" stroke="#5B9BF8" stroke-width="1.8" stroke-linecap="round" opacity="0.9"/>
+              <line x1="35" y1="79" x2="45" y2="79" stroke="#5B9BF8" stroke-width="1.6" stroke-linecap="round" opacity="0.7"/>
+            </g>
+          </svg>
+        </div>
+        <div class="product-body">
+          <div class="product-name">KPV</div>
+          <div class="product-desc">Anti-inflammatory tripeptide. 10mg lyophilized. Studied for gut health and inflammation modulation research.</div>
+          <div class="product-footer">
+            <div class="product-price">$69<span>/vial</span></div>
+            <button class="add-btn" onclick="event.stopPropagation();window.location.href='kpv.html'">View details</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card" data-cat="performance longevity" onclick="window.location.href='mots-c.html'">
+        <div class="product-img" style="background:linear-gradient(135deg,#EAF4FB,#BDE0F5)">
+          <svg width="80" height="80" viewBox="0 0 80 80" fill="none" aria-hidden="true">
+            <circle cx="40" cy="40" r="32" fill="white" opacity=".55"/>
+            <g transform="rotate(-20,40,40)">
+              <path d="M40 6 C52 13 55 24 47 31 C39 38 27 41 27 51 C27 61 39 64 47 71 C55 78 54 89 40 94"
+                    stroke="#0E6FA8" stroke-width="3.2" fill="none" stroke-linecap="round" opacity="0.95"/>
+              <path d="M40 6 C28 13 25 24 33 31 C41 38 53 41 53 51 C53 61 41 64 33 71 C25 78 26 89 40 94"
+                    stroke="#4DACE0" stroke-width="3.2" fill="none" stroke-linecap="round" opacity="0.72"/>
+              <line x1="35" y1="13" x2="45" y2="13" stroke="#5B9BF8" stroke-width="1.8" stroke-linecap="round" opacity="0.9"/>
+              <line x1="31" y1="21" x2="49" y2="21" stroke="#5B9BF8" stroke-width="1.8" stroke-linecap="round" opacity="0.9"/>
+              <line x1="28" y1="30" x2="52" y2="30" stroke="#5B9BF8" stroke-width="1.8" stroke-linecap="round" opacity="0.9"/>
+              <line x1="31" y1="39" x2="49" y2="39" stroke="#5B9BF8" stroke-width="1.6" stroke-linecap="round" opacity="0.7"/>
+              <line x1="37" y1="47" x2="43" y2="47" stroke="#5B9BF8" stroke-width="1.4" stroke-linecap="round" opacity="0.45"/>
+              <line x1="31" y1="55" x2="49" y2="55" stroke="#5B9BF8" stroke-width="1.6" stroke-linecap="round" opacity="0.7"/>
+              <line x1="28" y1="63" x2="52" y2="63" stroke="#5B9BF8" stroke-width="1.8" stroke-linecap="round" opacity="0.9"/>
+              <line x1="31" y1="71" x2="49" y2="71" stroke="#5B9BF8" stroke-width="1.8" stroke-linecap="round" opacity="0.9"/>
+              <line x1="35" y1="79" x2="45" y2="79" stroke="#5B9BF8" stroke-width="1.6" stroke-linecap="round" opacity="0.7"/>
+            </g>
+          </svg>
+        </div>
+        <div class="product-body">
+          <div class="product-name">MOTS-c</div>
+          <div class="product-desc">Mitochondrial-derived peptide. 10mg lyophilized. Studied for metabolic regulation and cellular energy research.</div>
+          <div class="product-footer">
+            <div class="product-price">$94<span>/vial</span></div>
+            <button class="add-btn" onclick="event.stopPropagation();window.location.href='mots-c.html'">View details</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card" data-cat="performance longevity" onclick="window.location.href='ss-31.html'">
+        <div class="product-img" style="background:linear-gradient(135deg,#F4EEFB,#DBC8F2)">
+          <svg width="80" height="80" viewBox="0 0 80 80" fill="none" aria-hidden="true">
+            <circle cx="40" cy="40" r="32" fill="white" opacity=".55"/>
+            <g transform="rotate(-20,40,40)">
+              <path d="M40 6 C52 13 55 24 47 31 C39 38 27 41 27 51 C27 61 39 64 47 71 C55 78 54 89 40 94"
+                    stroke="#6A38A8" stroke-width="3.2" fill="none" stroke-linecap="round" opacity="0.95"/>
+              <path d="M40 6 C28 13 25 24 33 31 C41 38 53 41 53 51 C53 61 41 64 33 71 C25 78 26 89 40 94"
+                    stroke="#A578E0" stroke-width="3.2" fill="none" stroke-linecap="round" opacity="0.72"/>
+              <line x1="35" y1="13" x2="45" y2="13" stroke="#5B9BF8" stroke-width="1.8" stroke-linecap="round" opacity="0.9"/>
+              <line x1="31" y1="21" x2="49" y2="21" stroke="#5B9BF8" stroke-width="1.8" stroke-linecap="round" opacity="0.9"/>
+              <line x1="28" y1="30" x2="52" y2="30" stroke="#5B9BF8" stroke-width="1.8" stroke-linecap="round" opacity="0.9"/>
+              <line x1="31" y1="39" x2="49" y2="39" stroke="#5B9BF8" stroke-width="1.6" stroke-linecap="round" opacity="0.7"/>
+              <line x1="37" y1="47" x2="43" y2="47" stroke="#5B9BF8" stroke-width="1.4" stroke-linecap="round" opacity="0.45"/>
+              <line x1="31" y1="55" x2="49" y2="55" stroke="#5B9BF8" stroke-width="1.6" stroke-linecap="round" opacity="0.7"/>
+              <line x1="28" y1="63" x2="52" y2="63" stroke="#5B9BF8" stroke-width="1.8" stroke-linecap="round" opacity="0.9"/>
+              <line x1="31" y1="71" x2="49" y2="71" stroke="#5B9BF8" stroke-width="1.8" stroke-linecap="round" opacity="0.9"/>
+              <line x1="35" y1="79" x2="45" y2="79" stroke="#5B9BF8" stroke-width="1.6" stroke-linecap="round" opacity="0.7"/>
+            </g>
+          </svg>
+        </div>
+        <div class="product-body">
+          <div class="product-name">SS-31</div>
+          <div class="product-desc">Elamipretide. 10mg lyophilized. Mitochondria-targeting peptide studied for cellular energy and oxidative stress research.</div>
+          <div class="product-footer">
+            <div class="product-price">$109<span>/vial</span></div>
+            <button class="add-btn" onclick="event.stopPropagation();window.location.href='ss-31.html'">View details</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card" data-cat="longevity" onclick="window.location.href='nad-plus.html'">
+        <div class="product-img" style="background:linear-gradient(135deg,#EBF2FD,#C5DCFA)">
+          <svg width="80" height="80" viewBox="0 0 80 80" fill="none" aria-hidden="true">
+            <circle cx="40" cy="40" r="32" fill="white" opacity=".55"/>
+            <g transform="rotate(-20,40,40)">
+              <path d="M40 6 C52 13 55 24 47 31 C39 38 27 41 27 51 C27 61 39 64 47 71 C55 78 54 89 40 94"
+                    stroke="#0F3F8C" stroke-width="3.2" fill="none" stroke-linecap="round" opacity="0.95"/>
+              <path d="M40 6 C28 13 25 24 33 31 C41 38 53 41 53 51 C53 61 41 64 33 71 C25 78 26 89 40 94"
+                    stroke="#4D7DD6" stroke-width="3.2" fill="none" stroke-linecap="round" opacity="0.72"/>
+              <line x1="35" y1="13" x2="45" y2="13" stroke="#5B9BF8" stroke-width="1.8" stroke-linecap="round" opacity="0.9"/>
+              <line x1="31" y1="21" x2="49" y2="21" stroke="#5B9BF8" stroke-width="1.8" stroke-linecap="round" opacity="0.9"/>
+              <line x1="28" y1="30" x2="52" y2="30" stroke="#5B9BF8" stroke-width="1.8" stroke-linecap="round" opacity="0.9"/>
+              <line x1="31" y1="39" x2="49" y2="39" stroke="#5B9BF8" stroke-width="1.6" stroke-linecap="round" opacity="0.7"/>
+              <line x1="37" y1="47" x2="43" y2="47" stroke="#5B9BF8" stroke-width="1.4" stroke-linecap="round" opacity="0.45"/>
+              <line x1="31" y1="55" x2="49" y2="55" stroke="#5B9BF8" stroke-width="1.6" stroke-linecap="round" opacity="0.7"/>
+              <line x1="28" y1="63" x2="52" y2="63" stroke="#5B9BF8" stroke-width="1.8" stroke-linecap="round" opacity="0.9"/>
+              <line x1="31" y1="71" x2="49" y2="71" stroke="#5B9BF8" stroke-width="1.8" stroke-linecap="round" opacity="0.9"/>
+              <line x1="35" y1="79" x2="45" y2="79" stroke="#5B9BF8" stroke-width="1.6" stroke-linecap="round" opacity="0.7"/>
+            </g>
+          </svg>
+        </div>
+        <div class="product-body">
+          <div class="product-name">NAD+</div>
+          <div class="product-desc">Nicotinamide adenine dinucleotide. 500mg lyophilized. Coenzyme studied for cellular energy metabolism and longevity research.</div>
+          <div class="product-footer">
+            <div class="product-price">$119<span>/vial</span></div>
+            <button class="add-btn" onclick="event.stopPropagation();window.location.href='nad-plus.html'">View details</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card" data-cat="longevity" onclick="window.location.href='semax.html'">
+        <div class="product-img" style="background:linear-gradient(135deg,#EEF2FD,#C9D6F5)">
+          <svg width="80" height="80" viewBox="0 0 80 80" fill="none" aria-hidden="true">
+            <circle cx="40" cy="40" r="32" fill="white" opacity=".55"/>
+            <g transform="rotate(-20,40,40)">
+              <path d="M40 6 C52 13 55 24 47 31 C39 38 27 41 27 51 C27 61 39 64 47 71 C55 78 54 89 40 94"
+                    stroke="#3349A8" stroke-width="3.2" fill="none" stroke-linecap="round" opacity="0.95"/>
+              <path d="M40 6 C28 13 25 24 33 31 C41 38 53 41 53 51 C53 61 41 64 33 71 C25 78 26 89 40 94"
+                    stroke="#7488DE" stroke-width="3.2" fill="none" stroke-linecap="round" opacity="0.72"/>
+              <line x1="35" y1="13" x2="45" y2="13" stroke="#5B9BF8" stroke-width="1.8" stroke-linecap="round" opacity="0.9"/>
+              <line x1="31" y1="21" x2="49" y2="21" stroke="#5B9BF8" stroke-width="1.8" stroke-linecap="round" opacity="0.9"/>
+              <line x1="28" y1="30" x2="52" y2="30" stroke="#5B9BF8" stroke-width="1.8" stroke-linecap="round" opacity="0.9"/>
+              <line x1="31" y1="39" x2="49" y2="39" stroke="#5B9BF8" stroke-width="1.6" stroke-linecap="round" opacity="0.7"/>
+              <line x1="37" y1="47" x2="43" y2="47" stroke="#5B9BF8" stroke-width="1.4" stroke-linecap="round" opacity="0.45"/>
+              <line x1="31" y1="55" x2="49" y2="55" stroke="#5B9BF8" stroke-width="1.6" stroke-linecap="round" opacity="0.7"/>
+              <line x1="28" y1="63" x2="52" y2="63" stroke="#5B9BF8" stroke-width="1.8" stroke-linecap="round" opacity="0.9"/>
+              <line x1="31" y1="71" x2="49" y2="71" stroke="#5B9BF8" stroke-width="1.8" stroke-linecap="round" opacity="0.9"/>
+              <line x1="35" y1="79" x2="45" y2="79" stroke="#5B9BF8" stroke-width="1.6" stroke-linecap="round" opacity="0.7"/>
+            </g>
+          </svg>
+        </div>
+        <div class="product-body">
+          <div class="product-name">Semax</div>
+          <div class="product-desc">Nootropic peptide. 10mg lyophilized. Studied for cognitive function and neuroprotective research.</div>
+          <div class="product-footer">
+            <div class="product-price">$74<span>/vial</span></div>
+            <button class="add-btn" onclick="event.stopPropagation();window.location.href='semax.html'">View details</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card" data-cat="longevity" onclick="window.location.href='dsip.html'">
+        <div class="product-img" style="background:linear-gradient(135deg,#F0EEFB,#D7D1F2)">
+          <svg width="80" height="80" viewBox="0 0 80 80" fill="none" aria-hidden="true">
+            <circle cx="40" cy="40" r="32" fill="white" opacity=".55"/>
+            <g transform="rotate(-20,40,40)">
+              <path d="M40 6 C52 13 55 24 47 31 C39 38 27 41 27 51 C27 61 39 64 47 71 C55 78 54 89 40 94"
+                    stroke="#4A3B8C" stroke-width="3.2" fill="none" stroke-linecap="round" opacity="0.95"/>
+              <path d="M40 6 C28 13 25 24 33 31 C41 38 53 41 53 51 C53 61 41 64 33 71 C25 78 26 89 40 94"
+                    stroke="#8A7AD6" stroke-width="3.2" fill="none" stroke-linecap="round" opacity="0.72"/>
+              <line x1="35" y1="13" x2="45" y2="13" stroke="#5B9BF8" stroke-width="1.8" stroke-linecap="round" opacity="0.9"/>
+              <line x1="31" y1="21" x2="49" y2="21" stroke="#5B9BF8" stroke-width="1.8" stroke-linecap="round" opacity="0.9"/>
+              <line x1="28" y1="30" x2="52" y2="30" stroke="#5B9BF8" stroke-width="1.8" stroke-linecap="round" opacity="0.9"/>
+              <line x1="31" y1="39" x2="49" y2="39" stroke="#5B9BF8" stroke-width="1.6" stroke-linecap="round" opacity="0.7"/>
+              <line x1="37" y1="47" x2="43" y2="47" stroke="#5B9BF8" stroke-width="1.4" stroke-linecap="round" opacity="0.45"/>
+              <line x1="31" y1="55" x2="49" y2="55" stroke="#5B9BF8" stroke-width="1.6" stroke-linecap="round" opacity="0.7"/>
+              <line x1="28" y1="63" x2="52" y2="63" stroke="#5B9BF8" stroke-width="1.8" stroke-linecap="round" opacity="0.9"/>
+              <line x1="31" y1="71" x2="49" y2="71" stroke="#5B9BF8" stroke-width="1.8" stroke-linecap="round" opacity="0.9"/>
+              <line x1="35" y1="79" x2="45" y2="79" stroke="#5B9BF8" stroke-width="1.6" stroke-linecap="round" opacity="0.7"/>
+            </g>
+          </svg>
+        </div>
+        <div class="product-body">
+          <div class="product-name">DSIP</div>
+          <div class="product-desc">Delta Sleep-Inducing Peptide. 5mg lyophilized. Studied for sleep regulation and stress response research.</div>
+          <div class="product-footer">
+            <div class="product-price">$64<span>/vial</span></div>
+            <button class="add-btn" onclick="event.stopPropagation();window.location.href='dsip.html'">View details</button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- SCIENCE -->
+<section id="science">
+  <div class="section-inner">
+    <p class="section-eyebrow" style="color:#5B9BF8">Our Standards</p>
+    <h2 class="section-title" style="color:#fff">Purity you can verify</h2>
+    <p class="section-sub" style="color:rgba(255,255,255,.55)">Every Blue Helix compound is manufactured under strict quality controls and independently verified before it reaches you.</p>
+    <div class="science-grid">
+      <div class="science-points">
+        <div class="sci-point">
+          <div class="sci-num">01</div>
+          <div class="sci-text">
+            <h4>HPLC &amp; Mass Spectrometry</h4>
+            <p>Every batch undergoes high-performance liquid chromatography alongside mass spec confirmation to verify sequence identity and rule out impurities.</p>
+          </div>
+        </div>
+        <div class="sci-point">
+          <div class="sci-num">02</div>
+          <div class="sci-text">
+            <h4>Third-party Certificate of Analysis</h4>
+            <p>Independent lab COA included with every order, downloadable from your account. No black-box purity claims — just verifiable data.</p>
+          </div>
+        </div>
+        <div class="sci-point">
+          <div class="sci-num">03</div>
+          <div class="sci-text">
+            <h4>Lyophilized for stability</h4>
+            <p>All peptides are freeze-dried under pharmaceutical conditions, extending shelf-life and maintaining structural integrity during transit.</p>
+          </div>
+        </div>
+      </div>
+      <div class="cert-grid">
+        <div class="cert-card">
+          <div class="cert-icon">🔬</div>
+          <div class="cert-title">≥99% Purity</div>
+          <div class="cert-sub">HPLC verified on every batch</div>
+        </div>
+        <div class="cert-card">
+          <div class="cert-icon">📋</div>
+          <div class="cert-title">Full COA</div>
+          <div class="cert-sub">Third-party documented</div>
+        </div>
+        <div class="cert-card">
+          <div class="cert-icon">🧊</div>
+          <div class="cert-title">Cold Storage</div>
+          <div class="cert-sub">Climate-controlled warehouse</div>
+        </div>
+        <div class="cert-card">
+          <div class="cert-icon">🚚</div>
+          <div class="cert-title">Cold-Chain Ship</div>
+          <div class="cert-sub">Insulated, discreet packaging</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section id="how">
+  <div class="section-inner">
+    <p class="section-eyebrow">Process</p>
+    <h2 class="section-title">From order to protocol</h2>
+    <p class="section-sub">We keep every step simple, transparent, and secure.</p>
+    <div class="steps">
+      <div class="step">
+        <div class="step-num">1</div>
+        <h4>Select &amp; order</h4>
+        <p>Browse our catalogue, review each compound's spec sheet and COA summary, then place your order securely.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">2</div>
+        <h4>Packed &amp; shipped</h4>
+        <p>Orders dispatched within 48 hours in insulated, cold-chain packaging with full tracking provided.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">3</div>
+        <h4>Verify &amp; research</h4>
+        <p>Download your batch COA from your account and begin your research protocol with confidence.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- REVIEWS -->
+<section id="reviews">
+  <div class="section-inner">
+    <p class="section-eyebrow">Customer Reviews</p>
+    <h2 class="section-title">Trusted by researchers &amp; biohackers</h2>
+    <div class="reviews-grid">
+      <div class="review-card">
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">"Ordered BPC-157 after trying two other vendors. The COA data and purity are genuinely on a different level. Fast shipping, great packaging. Will not go elsewhere."</p>
+        <div class="reviewer">
+          <div class="reviewer-avatar">MK</div>
+          <div>
+            <div class="reviewer-name">Marcus K.</div>
+            <div class="reviewer-tag">Verified buyer · Recovery protocol</div>
+          </div>
+        </div>
+      </div>
+      <div class="review-card">
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">"The transparency here is rare in this industry. Every order comes with a real COA you can actually read. Epithalon and Selank both arrived perfectly — lyophilized, cold-packed, no issues."</p>
+        <div class="reviewer">
+          <div class="reviewer-avatar">SR</div>
+          <div>
+            <div class="reviewer-name">Sophia R.</div>
+            <div class="reviewer-tag">Verified buyer · Longevity stack</div>
+          </div>
+        </div>
+      </div>
+      <div class="review-card">
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">"The CJC-1295 / Ipamorelin combo stack I built from here has been excellent. Customer support answered my questions within the hour. Solid operation."</p>
+        <div class="reviewer">
+          <div class="reviewer-avatar">DT</div>
+          <div>
+            <div class="reviewer-name">Daniel T.</div>
+            <div class="reviewer-tag">Verified buyer · Performance stack</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA BANNER -->
+<div class="cta-banner">
+  <h2>Stay ahead of the research</h2>
+  <p>Join the Blue Helix list for new compound launches, protocol guides, and subscriber-only pricing.</p>
+  <div class="cta-form">
+    <input type="email" placeholder="your@email.com" aria-label="Email address"/>
+    <button type="button" onclick="subscribeEmail(this)">Subscribe</button>
+  </div>
+  <p class="cta-fine">No spam. Unsubscribe anytime. For research purposes only.</p>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <div class="logo-text">Blue <span style="color:#2D7BF0">Helix</span> Peptides</div>
+        <p>Research-grade peptide compounds for scientists, biohackers, and performance-focused individuals.</p>
+      </div>
+      <div class="footer-col">
+        <h5>Products</h5>
+        <ul>
+          <li><a href="#products">BPC-157</a></li>
+          <li><a href="#products">TB-500</a></li>
+          <li><a href="#products">Epithalon</a></li>
+          <li><a href="#products">Tirzepatide</a></li>
+          <li><a href="#products">Semaglutide</a></li>
+          <li><a href="#products">Retatrutide</a></li>
+          <li><a href="#products">CJC-1295</a></li>
+          <li><a href="#products">Ipamorelin</a></li>
+          <li><a href="#products">Selank</a></li>
+          <li><a href="#products">GLOW 70mg Blend</a></li>
+          <li><a href="#products">KLOW 80mg Blend</a></li>
+          <li><a href="#products">PT-141</a></li>
+          <li><a href="#products">CJC-1295 (No DAC)</a></li>
+          <li><a href="#products">Cagrilintide</a></li>
+          <li><a href="#products">GHK-Cu</a></li>
+          <li><a href="#products">Melanotan II</a></li>
+          <li><a href="#products">Tesamorelin</a></li>
+          <li><a href="#products">Sermorelin</a></li>
+          <li><a href="#products">KPV</a></li>
+          <li><a href="#products">MOTS-c</a></li>
+          <li><a href="#products">SS-31</a></li>
+          <li><a href="#products">NAD+</a></li>
+          <li><a href="#products">Semax</a></li>
+          <li><a href="#products">DSIP</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Company</h5>
+        <ul>
+          <li><a href="#science">Our Science</a></li>
+          <li><a href="#how">How It Works</a></li>
+          <li><a href="#reviews">Reviews</a></li>
+          <li><a href="#">COA Library</a></li>
+          <li><a href="#">Blog</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Support</h5>
+        <ul>
+          <li><a href="#">FAQ</a></li>
+          <li><a href="#">Shipping Policy</a></li>
+          <li><a href="#">Returns</a></li>
+          <li><a href="#">Contact Us</a></li>
+          <li><a href="#">Terms of Use</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Blue Helix Peptides. All rights reserved.</span>
+      <span>Privacy Policy · Terms of Service</span>
+    </div>
+    <p class="footer-disclaimer">All products sold by Blue Helix Peptides are intended for research purposes only. Not for human consumption. These statements have not been evaluated by the Food and Drug Administration. These products are not intended to diagnose, treat, cure, or prevent any disease.</p>
+  </div>
+</footer>
+
+<!-- TOAST -->
+<div class="toast" id="toast" role="status" aria-live="polite">
+  <span class="toast-dot"></span>
+  <span id="toastMsg">Added to cart</span>
+</div>
+
+<script>
+let cartCount = 0;
+
+function addToCart(name, price) {
+  cartCount++;
+  document.getElementById('cartBadge').textContent = cartCount;
+  const msg = document.getElementById('toastMsg');
+  msg.textContent = name + ' added to cart — $' + price;
+  const toast = document.getElementById('toast');
+  toast.classList.add('show');
+  clearTimeout(window._toastTimer);
+  window._toastTimer = setTimeout(() => toast.classList.remove('show'), 2800);
+}
+
+function filterProducts(cat, btn) {
+  document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  document.querySelectorAll('.product-card').forEach(card => {
+    const cats = card.dataset.cat.split(' ');
+    card.style.display = (cat === 'all' || cats.includes(cat)) ? '' : 'none';
+  });
+}
+
+function subscribeEmail(btn) {
+  const input = btn.previousElementSibling;
+  if (!input.value || !input.value.includes('@')) {
+    input.style.outline = '2px solid #E24B4A';
+    setTimeout(() => input.style.outline = '', 1500);
+    return;
+  }
+  btn.textContent = 'Subscribed ✓';
+  btn.style.background = '#0F6E56';
+  btn.disabled = true;
+  input.disabled = true;
+}
+</script>
+</body>
+</html>

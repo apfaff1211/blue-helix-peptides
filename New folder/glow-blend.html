@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>GLOW 70mg Blend — Blue Helix Peptides</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet"/>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --navy:#0A1628; --blue:#1A5FD4; --blue-mid:#2D7BF0; --blue-pale:#EBF2FD;
+  --accent:#C2417A; --accent-pale:#FDF0F5;
+  --ice:#F5F8FE; --white:#FFFFFF; --text-primary:#0A1628; --text-secondary:#4A5568;
+  --text-muted:#8896AB; --border:#DDE5F0; --border-light:#EEF3FA; --radius:10px; --radius-lg:16px;
+}
+html{scroll-behavior:smooth}
+body{font-family:'Inter',sans-serif;color:var(--text-primary);background:var(--white);line-height:1.6;-webkit-font-smoothing:antialiased}
+nav{position:sticky;top:0;z-index:100;background:rgba(255,255,255,0.92);backdrop-filter:blur(12px);border-bottom:1px solid var(--border-light);padding:0 5%}
+.nav-inner{max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;height:64px}
+.logo{display:flex;align-items:center;gap:10px;text-decoration:none}
+.logo-icon{width:34px;height:34px}
+.logo-text{font-family:'DM Serif Display',serif;font-size:18px;color:var(--navy);letter-spacing:-0.01em}
+.logo-text span{color:var(--blue)}
+.nav-links{display:flex;align-items:center;gap:32px;list-style:none}
+.nav-links a{text-decoration:none;font-size:14px;font-weight:500;color:var(--text-secondary);transition:color .2s}
+.nav-links a:hover{color:var(--blue)}
+.nav-cta{background:var(--blue);color:#fff;padding:9px 20px;border-radius:var(--radius);font-size:14px;font-weight:500;text-decoration:none;transition:background .2s,transform .15s}
+.nav-cta:hover{background:#1550b8;transform:translateY(-1px)}
+.nav-cart{display:flex;align-items:center;gap:6px;font-size:14px;font-weight:500;color:var(--text-secondary);text-decoration:none;cursor:pointer;position:relative}
+.cart-badge{background:var(--blue);color:#fff;border-radius:50%;width:18px;height:18px;font-size:10px;display:flex;align-items:center;justify-content:center;position:absolute;top:-5px;right:-8px}
+.breadcrumb{max-width:1200px;margin:0 auto;padding:20px 5% 0;font-size:13px;color:var(--text-muted)}
+.breadcrumb a{color:var(--text-muted);text-decoration:none}
+.breadcrumb a:hover{color:var(--blue)}
+.product-detail{max-width:1200px;margin:0 auto;padding:32px 5% 80px;display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:start}
+.detail-visual{position:sticky;top:96px;background:linear-gradient(135deg,var(--accent-pale),#F5C6DC);border-radius:var(--radius-lg);padding:60px;display:flex;align-items:center;justify-content:center;min-height:420px}
+.detail-helix-wrap{position:relative;width:220px;height:280px}
+.detail-glow{position:absolute;inset:-20px;background:radial-gradient(circle,rgba(194,65,122,0.18) 0%,transparent 70%);border-radius:50%}
+.detail-info{padding-top:8px}
+.detail-eyebrow{font-size:11px;font-weight:600;letter-spacing:0.14em;text-transform:uppercase;color:var(--accent);margin-bottom:10px}
+.detail-title{font-family:'DM Serif Display',serif;font-size:clamp(32px,3.5vw,42px);color:var(--navy);letter-spacing:-0.02em;margin-bottom:8px}
+.detail-subtitle{font-size:15px;color:var(--text-muted);margin-bottom:20px}
+.detail-rating{display:flex;align-items:center;gap:8px;margin-bottom:24px}
+.stars{color:var(--blue);font-size:14px;letter-spacing:1px}
+.rating-text{font-size:13px;color:var(--text-muted)}
+.detail-price{font-family:'DM Serif Display',serif;font-size:36px;color:var(--navy);margin-bottom:4px}
+.detail-price span{font-size:14px;font-weight:400;color:var(--text-muted);font-family:'Inter',sans-serif;margin-left:4px}
+.detail-price-note{font-size:13px;color:var(--text-muted);margin-bottom:28px}
+.qty-row{display:flex;align-items:center;gap:16px;margin-bottom:24px}
+.qty-control{display:flex;align-items:center;border:1.5px solid var(--border);border-radius:var(--radius);overflow:hidden}
+.qty-btn{width:40px;height:42px;background:#fff;border:none;font-size:16px;color:var(--navy);cursor:pointer;transition:background .15s}
+.qty-btn:hover{background:var(--ice)}
+.qty-num{width:44px;text-align:center;font-size:15px;font-weight:600;color:var(--navy)}
+.detail-actions{display:flex;gap:12px;margin-bottom:32px}
+.btn-add-cart{flex:1;background:var(--accent);color:#fff;border:none;padding:16px 24px;border-radius:var(--radius);font-size:15px;font-weight:500;cursor:pointer;font-family:inherit;transition:background .2s,transform .15s;filter:brightness(1)}
+.btn-add-cart:hover{filter:brightness(0.88);transform:translateY(-1px)}
+.detail-trust{display:flex;flex-direction:column;gap:12px;padding:20px;background:var(--ice);border-radius:var(--radius-lg);margin-bottom:32px}
+.trust-row{display:flex;align-items:center;gap:10px;font-size:13px;color:var(--text-secondary)}
+.trust-row svg{flex-shrink:0;color:var(--accent)}
+.detail-tabs{border-top:1px solid var(--border-light);padding-top:28px}
+.tab-section{margin-bottom:24px}
+.tab-section h3{font-size:14px;font-weight:600;color:var(--navy);margin-bottom:10px}
+.tab-section p{font-size:14px;color:var(--text-secondary);line-height:1.75}
+.spec-table{width:100%;border-collapse:collapse;margin-top:8px}
+.spec-table tr{border-bottom:1px solid var(--border-light)}
+.spec-table td{padding:10px 0;font-size:13px}
+.spec-table td:first-child{color:var(--text-muted);width:40%}
+.spec-table td:last-child{color:var(--navy);font-weight:500}
+.disclaimer-box{background:#FFF9E8;border:1px solid #F0E0A8;border-radius:var(--radius);padding:16px 18px;font-size:12px;color:#7A5C0A;line-height:1.6;margin-top:24px}
+.toast{position:fixed;bottom:24px;right:24px;background:var(--navy);color:#fff;padding:14px 20px;border-radius:var(--radius);font-size:14px;font-weight:500;transform:translateY(80px);opacity:0;transition:all .3s;z-index:999;display:flex;align-items:center;gap:8px;box-shadow:0 8px 24px rgba(0,0,0,0.2)}
+.toast.show{transform:translateY(0);opacity:1}
+.toast-dot{width:8px;height:8px;background:#4ADE80;border-radius:50%;flex-shrink:0}
+footer{background:var(--navy);color:rgba(255,255,255,0.5);padding:48px 5% 32px;margin-top:40px}
+.footer-inner{max-width:1200px;margin:0 auto}
+.footer-disclaimer{font-size:11px;color:rgba(255,255,255,0.25);line-height:1.6;text-align:center}
+@media(max-width:860px){
+  .product-detail{grid-template-columns:1fr;gap:32px}
+  .detail-visual{position:static;min-height:300px;padding:36px}
+}
+@media(max-width:520px){nav .nav-links{display:none}}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+</style>
+</head>
+<body>
+<nav>
+  <div class="nav-inner">
+    <a href="index.html" class="logo">
+      <svg class="logo-icon" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <circle cx="18" cy="18" r="17" fill="#EBF2FD"/>
+        <g transform="rotate(-30,18,18)">
+          <path d="M18 3 C22 6 22 10 18 13 C14 16 14 20 18 23 C22 26 22 30 18 33" stroke="#1A5FD4" stroke-width="2.2" fill="none" stroke-linecap="round"/>
+          <path d="M18 3 C14 6 14 10 18 13 C22 16 22 20 18 23 C14 26 14 30 18 33" stroke="#5B9BF8" stroke-width="2.2" fill="none" stroke-linecap="round"/>
+          <line x1="14.5" y1="5.5"  x2="21.5" y2="5.5"  stroke="#2D7BF0" stroke-width="1.3" stroke-linecap="round" opacity="0.85"/>
+          <line x1="13"   y1="8"    x2="23"   y2="8"    stroke="#2D7BF0" stroke-width="1.3" stroke-linecap="round" opacity="0.85"/>
+          <line x1="14.5" y1="10.5" x2="21.5" y2="10.5" stroke="#2D7BF0" stroke-width="1.3" stroke-linecap="round" opacity="0.85"/>
+          <line x1="16.5" y1="13"   x2="19.5" y2="13"   stroke="#2D7BF0" stroke-width="1"   stroke-linecap="round" opacity="0.5"/>
+          <line x1="14.5" y1="15.5" x2="21.5" y2="15.5" stroke="#2D7BF0" stroke-width="1.3" stroke-linecap="round" opacity="0.85"/>
+          <line x1="13"   y1="18"   x2="23"   y2="18"   stroke="#2D7BF0" stroke-width="1.3" stroke-linecap="round" opacity="0.85"/>
+          <line x1="14.5" y1="20.5" x2="21.5" y2="20.5" stroke="#2D7BF0" stroke-width="1.3" stroke-linecap="round" opacity="0.85"/>
+          <line x1="16.5" y1="23"   x2="19.5" y2="23"   stroke="#2D7BF0" stroke-width="1"   stroke-linecap="round" opacity="0.5"/>
+          <line x1="14.5" y1="25.5" x2="21.5" y2="25.5" stroke="#2D7BF0" stroke-width="1.3" stroke-linecap="round" opacity="0.85"/>
+          <line x1="13"   y1="28"   x2="23"   y2="28"   stroke="#2D7BF0" stroke-width="1.3" stroke-linecap="round" opacity="0.85"/>
+          <line x1="14.5" y1="30.5" x2="21.5" y2="30.5" stroke="#2D7BF0" stroke-width="1.3" stroke-linecap="round" opacity="0.85"/>
+        </g>
+      </svg>
+      <span class="logo-text">Blue <span>Helix</span> Peptides</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html#products">Products</a></li>
+      <li><a href="index.html#science">Science</a></li>
+      <li><a href="index.html#how">How It Works</a></li>
+      <li><a href="index.html#reviews">Reviews</a></li>
+    </ul>
+    <div style="display:flex;align-items:center;gap:16px">
+      <a href="#" class="nav-cart" onclick="return false" aria-label="Cart">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg>
+        <span class="cart-badge" id="cartBadge">0</span>
+      </a>
+      <a href="index.html#products" class="nav-cta">Shop All</a>
+    </div>
+  </div>
+</nav>
+<div class="breadcrumb">
+  <a href="index.html">Home</a> / <a href="index.html#products">Products</a> / GLOW 70mg Blend
+</div>
+<div class="product-detail">
+  <div class="detail-visual">
+    <div class="detail-helix-wrap">
+      <div class="detail-glow"></div>
+      <svg viewBox="0 0 220 280" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" style="position:relative">
+        <g transform="rotate(-18,110,140)">
+          <path d="M110 12 C140 28 148 56 128 76 C108 96 80 100 80 130 C80 160 108 164 128 184 C148 204 148 232 110 260"
+                stroke="#C2417A" stroke-width="9" fill="none" stroke-linecap="round" opacity="0.95"/>
+          <path d="M110 12 C80 28 72 56 92 76 C112 96 140 100 140 130 C140 160 112 164 92 184 C72 204 72 232 110 260"
+                stroke="#EB7BAE" stroke-width="9" fill="none" stroke-linecap="round" opacity="0.7"/>
+          <line x1="98"  y1="30"  x2="122" y2="30"  stroke="#F2A6C6" stroke-width="4" stroke-linecap="round" opacity="0.9"/>
+          <line x1="90"  y1="48"  x2="130" y2="48"  stroke="#F2A6C6" stroke-width="4" stroke-linecap="round" opacity="0.9"/>
+          <line x1="86"  y1="66"  x2="134" y2="66"  stroke="#F2A6C6" stroke-width="4" stroke-linecap="round" opacity="0.9"/>
+          <line x1="92"  y1="84"  x2="128" y2="84"  stroke="#F2A6C6" stroke-width="3.5" stroke-linecap="round" opacity="0.75"/>
+          <line x1="103" y1="100" x2="117" y2="100" stroke="#F2A6C6" stroke-width="3"   stroke-linecap="round" opacity="0.5"/>
+          <line x1="92"  y1="116" x2="128" y2="116" stroke="#F2A6C6" stroke-width="3.5" stroke-linecap="round" opacity="0.75"/>
+          <line x1="86"  y1="134" x2="134" y2="134" stroke="#F2A6C6" stroke-width="4"   stroke-linecap="round" opacity="0.9"/>
+          <line x1="90"  y1="152" x2="130" y2="152" stroke="#F2A6C6" stroke-width="4"   stroke-linecap="round" opacity="0.9"/>
+          <line x1="97"  y1="168" x2="123" y2="168" stroke="#F2A6C6" stroke-width="3.5" stroke-linecap="round" opacity="0.75"/>
+          <line x1="104" y1="184" x2="116" y2="184" stroke="#F2A6C6" stroke-width="3"   stroke-linecap="round" opacity="0.5"/>
+          <line x1="92"  y1="200" x2="128" y2="200" stroke="#F2A6C6" stroke-width="3.5" stroke-linecap="round" opacity="0.75"/>
+          <line x1="86"  y1="216" x2="134" y2="216" stroke="#F2A6C6" stroke-width="4"   stroke-linecap="round" opacity="0.9"/>
+          <line x1="92"  y1="234" x2="128" y2="234" stroke="#F2A6C6" stroke-width="4"   stroke-linecap="round" opacity="0.9"/>
+          <line x1="100" y1="250" x2="120" y2="250" stroke="#F2A6C6" stroke-width="3.5" stroke-linecap="round" opacity="0.75"/>
+        </g>
+      </svg>
+    </div>
+  </div>
+  <div class="detail-info">
+    <p class="detail-eyebrow">Recovery & Longevity Research</p>
+    <h1 class="detail-title">GLOW 70mg Blend</h1>
+    <p class="detail-subtitle">50mg GHK-Cu · 10mg BPC-157 · 10mg TB-500</p>
+    <div class="detail-rating">
+      <span class="stars">★★★★★</span>
+      <span class="rating-text">4.9 (142 verified research reviews)</span>
+    </div>
+    <div class="detail-price">$119<span>/vial</span></div>
+    <p class="detail-price-note">70mg total lyophilized vial</p>
+    <div class="qty-row">
+      <span style="font-size:13px;font-weight:600;color:var(--navy)">Quantity</span>
+      <div class="qty-control">
+        <button class="qty-btn" onclick="changeQty(-1)" aria-label="Decrease quantity">−</button>
+        <span class="qty-num" id="qtyNum">1</span>
+        <button class="qty-btn" onclick="changeQty(1)" aria-label="Increase quantity">+</button>
+      </div>
+    </div>
+    <div class="detail-actions">
+      <button class="btn-add-cart" onclick="addItemToCart()">Add to cart — <span id="totalPrice">$119</span></button>
+    </div>
+    <div class="detail-trust">
+      <div class="trust-row">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"/></svg>
+        <span>Certificate of Analysis included with every vial</span>
+      </div>
+      <div class="trust-row">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="3" width="15" height="13" rx="1"/><path d="M16 8h4l3 3v5h-7V8zM1 16h22v4H1z"/></svg>
+        <span>Cold-chain shipping, dispatched within 48 hours</span>
+      </div>
+      <div class="trust-row">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        <span>≥99% purity, HPLC and mass-spec verified</span>
+      </div>
+    </div>
+    <div class="detail-tabs">
+      <div class="tab-section">
+        <h3>Overview</h3>
+        <p>GLOW is a synergistic three-peptide blend combining GHK-Cu, BPC-157, and TB-500 in a single formulation designed for skin, tissue repair, and recovery research. Each component targets a complementary pathway: GHK-Cu for collagen and skin remodeling, BPC-157 for tissue and gut integrity, and TB-500 for cellular migration and flexibility. Supplied as a sterile lyophilized powder, independently verified for purity and identity.</p>
+      </div>
+      <div class="tab-section">
+        <h3>Specifications</h3>
+        <table class="spec-table">
+          <tr><td>Form</td><td>Lyophilized powder</td></tr>
+          <tr><td>Dose</td><td>70mg total per vial</td></tr>
+          <tr><td>Purity</td><td>≥99%, HPLC verified</td></tr>
+          <tr><td>Storage</td><td>Refrigerate 2–8°C, protect from light</td></tr>
+          <tr><td>Shipping</td><td>Cold-chain, insulated packaging</td></tr>
+          <tr><td>COA</td><td>Included with every batch</td></tr>
+        </table>
+      </div>
+      <div class="disclaimer-box">
+        For research purposes only. Not for human consumption. This product is not intended to diagnose, treat, cure, or prevent any disease and has not been evaluated by the FDA.
+      </div>
+    </div>
+  </div>
+</div>
+<div class="toast" id="toast" role="status" aria-live="polite">
+  <span class="toast-dot"></span>
+  <span id="toastMsg">Added to cart</span>
+</div>
+<footer>
+  <div class="footer-inner">
+    <p class="footer-disclaimer">All products sold by Blue Helix Peptides are intended for research purposes only. Not for human consumption. These statements have not been evaluated by the Food and Drug Administration. © 2026 Blue Helix Peptides.</p>
+  </div>
+</footer>
+<script>
+let qty = 1;
+const price = 119;
+function changeQty(delta){
+  qty = Math.max(1, qty + delta);
+  document.getElementById('qtyNum').textContent = qty;
+  document.getElementById('totalPrice').textContent = '$' + (price * qty);
+}
+function addItemToCart(){
+  const badge = document.getElementById('cartBadge');
+  badge.textContent = parseInt(badge.textContent, 10) + qty;
+  const msg = document.getElementById('toastMsg');
+  msg.textContent = qty + ' × GLOW 70mg Blend added — $' + (price * qty);
+  const toast = document.getElementById('toast');
+  toast.classList.add('show');
+  clearTimeout(window._toastTimer);
+  window._toastTimer = setTimeout(() => toast.classList.remove('show'), 2800);
+}
+</script>
+</body>
+</html>
